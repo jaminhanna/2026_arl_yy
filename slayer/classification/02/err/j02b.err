@@ -1,0 +1,6 @@
+/lustre/isaac24/scratch/jhanna8/repos/tennlab-slayer/src/tennlab_slayer/train_test.py:314: FutureWarning: `torch.distributed.reduce_op` is deprecated, please use `torch.distributed.ReduceOp` instead
+  if isinstance(obj, _MultiProcessingDataLoaderIter):
+Traceback (most recent call last):
+  File "/lustre/isaac24/proj/UTK0319/jhanna8/repos/2026_ARL_YY/slayer/02/scripts/j02b.py", line 87, in <module>
+    with open("networks/network.json", 'w') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'networks/network.json'

@@ -1,0 +1,92 @@
+[I 2026-06-11 13:57:22,709] A new study created in memory with name: no-name-ea468b4d-eff1-4a4f-ad67-b0c8d4776ea0
+/lustre/isaac24/scratch/jhanna8/repos/tennlab-slayer/src/tennlab_slayer/train_test.py:314: FutureWarning: `torch.distributed.reduce_op` is deprecated, please use `torch.distributed.ReduceOp` instead
+  if isinstance(obj, _MultiProcessingDataLoaderIter):
+[I 2026-06-11 14:15:59,758] Trial 0 finished with value: 0.852022729642373 and parameters: {'threshold': 1.4583567251297251, 'decay': 'none', 'min_potential': -0.05103644516857186, 'discrete': False, 'delay_bounds_min': 6.1507798650346315, 'delay_bounds_max': 14.66951304808406, 'decoder': 'vote_decoder', 'lr': 0.005151098695632123}. Best is trial 0 with value: 0.852022729642373.
+[I 2026-06-11 14:28:44,317] Trial 1 finished with value: 0.5 and parameters: {'threshold': 0.3104645182984457, 'decay': 'all', 'min_potential': -0.07707665253656315, 'discrete': True, 'delay_bounds_min': 15.04419191444829, 'delay_bounds_max': 18.645712741895558, 'decoder': 'vote_decoder', 'lr': 0.0019565019437108424}. Best is trial 0 with value: 0.852022729642373.
+[I 2026-06-11 14:42:28,536] Trial 2 finished with value: 0.5 and parameters: {'threshold': 0.8292416068824279, 'decay': 'all', 'min_potential': -0.037318001098629275, 'discrete': False, 'delay_bounds_min': 11.430835203716992, 'delay_bounds_max': 17.816507608894817, 'decoder': 'vote_decoder', 'lr': 0.00028004833107055137}. Best is trial 0 with value: 0.852022729642373.
+[I 2026-06-11 14:55:25,720] Trial 3 finished with value: 0.8606506099468252 and parameters: {'threshold': 1.171221299686092, 'decay': 'all', 'min_potential': -0.035387384360497695, 'discrete': False, 'delay_bounds_min': 1.004468626941648, 'delay_bounds_max': 13.320738708552188, 'decoder': 'vote_decoder', 'lr': 0.003936251021158542}. Best is trial 3 with value: 0.8606506099468252.
+[I 2026-06-11 15:08:06,969] Trial 4 finished with value: 0.5 and parameters: {'threshold': 0.6517422354067987, 'decay': 'all', 'min_potential': -0.07272925374653544, 'discrete': True, 'delay_bounds_min': 8.68994199088838, 'delay_bounds_max': 18.610805963413817, 'decoder': 'vote_decoder', 'lr': 0.008941847166570479}. Best is trial 3 with value: 0.8606506099468252.
+[I 2026-06-11 15:22:08,936] Trial 5 finished with value: 0.5 and parameters: {'threshold': 1.1695414238837416, 'decay': 'none', 'min_potential': -0.09386338046193639, 'discrete': False, 'delay_bounds_min': 11.477410872342206, 'delay_bounds_max': 12.581325947081538, 'decoder': 'vote_decoder', 'lr': 0.008158847723360327}. Best is trial 3 with value: 0.8606506099468252.
+[I 2026-06-11 15:34:55,908] Trial 6 finished with value: 0.5 and parameters: {'threshold': 1.6274598815116632, 'decay': 'all', 'min_potential': -0.033138179565510587, 'discrete': True, 'delay_bounds_min': 10.212596145999226, 'delay_bounds_max': 14.96472221942715, 'decoder': 'vote_decoder', 'lr': 0.0024375880727395263}. Best is trial 3 with value: 0.8606506099468252.
+[I 2026-06-11 15:48:44,681] Trial 7 finished with value: 0.5 and parameters: {'threshold': 1.2476057195650379, 'decay': 'all', 'min_potential': -0.009114565321511073, 'discrete': False, 'delay_bounds_min': 15.85989547534401, 'delay_bounds_max': 19.298702103180656, 'decoder': 'vote_decoder', 'lr': 0.0007888611429036416}. Best is trial 3 with value: 0.8606506099468252.
+[I 2026-06-11 16:03:38,586] Trial 8 finished with value: 0.5000521322072776 and parameters: {'threshold': 1.9018821750638824, 'decay': 'none', 'min_potential': -0.054672637574179485, 'discrete': True, 'delay_bounds_min': 8.268996294588348, 'delay_bounds_max': 18.54491571164556, 'decoder': 'vote_decoder', 'lr': 0.008175868646739429}. Best is trial 3 with value: 0.8606506099468252.
+[I 2026-06-11 16:19:05,844] Trial 9 finished with value: 0.8555416536336149 and parameters: {'threshold': 0.9419730564311651, 'decay': 'none', 'min_potential': -0.09863090767803284, 'discrete': False, 'delay_bounds_min': 4.796479576602408, 'delay_bounds_max': 18.10450197237022, 'decoder': 'vote_decoder', 'lr': 0.0027806238596507445}. Best is trial 3 with value: 0.8606506099468252.
+[I 2026-06-11 16:34:35,225] Trial 10 finished with value: 0.8633093525179856 and parameters: {'threshold': 0.15653420145002817, 'decay': 'all', 'min_potential': -0.008103071180543861, 'discrete': False, 'delay_bounds_min': 2.324552805566135, 'delay_bounds_max': 5.147527087688843, 'decoder': 'vote_decoder', 'lr': 0.005929300076099462}. Best is trial 10 with value: 0.8633093525179856.
+[I 2026-06-11 16:48:37,796] Trial 11 finished with value: 0.8556459180481701 and parameters: {'threshold': 0.1580678759416292, 'decay': 'all', 'min_potential': -0.004775690505862674, 'discrete': False, 'delay_bounds_min': 1.204779644454553, 'delay_bounds_max': 5.833137590710018, 'decoder': 'vote_decoder', 'lr': 0.0055487243801577825}. Best is trial 10 with value: 0.8633093525179856.
+[I 2026-06-11 17:02:33,312] Trial 12 finished with value: 0.8455583359399437 and parameters: {'threshold': 0.5263245822247254, 'decay': 'all', 'min_potential': -0.017459104083102354, 'discrete': False, 'delay_bounds_min': 1.1448358981237055, 'delay_bounds_max': 1.9420502244704245, 'decoder': 'vote_decoder', 'lr': 0.005116064590454042}. Best is trial 10 with value: 0.8633093525179856.
+[I 2026-06-11 17:18:20,294] Trial 13 finished with value: 0.8555937858408925 and parameters: {'threshold': 1.9264643382880564, 'decay': 'all', 'min_potential': -0.02781842063500415, 'discrete': False, 'delay_bounds_min': 4.045778748406444, 'delay_bounds_max': 9.415732962272564, 'decoder': 'vote_decoder', 'lr': 0.006624673898048255}. Best is trial 10 with value: 0.8633093525179856.
+[I 2026-06-11 17:33:46,559] Trial 14 finished with value: 0.8611719320196017 and parameters: {'threshold': 0.4114322218801731, 'decay': 'all', 'min_potential': -0.019892823988991844, 'discrete': False, 'delay_bounds_min': 2.8477815077739352, 'delay_bounds_max': 8.604155393543888, 'decoder': 'vote_decoder', 'lr': 0.0037997916186593}. Best is trial 10 with value: 0.8633093525179856.
+[I 2026-06-11 17:39:06,024] Trial 15 pruned. 
+[I 2026-06-11 17:54:40,868] Trial 16 finished with value: 0.8590605776248567 and parameters: {'threshold': 0.12046725114084297, 'decay': 'all', 'min_potential': -0.0022222607357452323, 'discrete': False, 'delay_bounds_min': 3.972304979116479, 'delay_bounds_max': 7.619820531349989, 'decoder': 'vote_decoder', 'lr': 0.003822228888030798}. Best is trial 10 with value: 0.8633093525179856.
+[I 2026-06-11 18:11:43,963] Trial 17 pruned. 
+[I 2026-06-11 18:22:47,515] Trial 18 pruned. 
+[I 2026-06-11 18:34:09,084] Trial 19 pruned. 
+[I 2026-06-11 18:52:23,497] Trial 20 finished with value: 0.8597904285267438 and parameters: {'threshold': 0.23718043839011244, 'decay': 'all', 'min_potential': -0.014803418388282856, 'discrete': False, 'delay_bounds_min': 2.717733412902324, 'delay_bounds_max': 6.637019246195987, 'decoder': 'vote_decoder', 'lr': 0.00997526929195107}. Best is trial 10 with value: 0.8633093525179856.
+[I 2026-06-11 19:09:51,936] Trial 21 finished with value: 0.8534824314461474 and parameters: {'threshold': 1.099225784906748, 'decay': 'all', 'min_potential': -0.03824037983451183, 'discrete': False, 'delay_bounds_min': 1.2641510896578363, 'delay_bounds_max': 3.7103405878498728, 'decoder': 'vote_decoder', 'lr': 0.003987953050997628}. Best is trial 10 with value: 0.8633093525179856.
+[I 2026-06-11 19:27:25,348] Trial 22 finished with value: 0.8614586591596288 and parameters: {'threshold': 0.5477575921337587, 'decay': 'all', 'min_potential': -0.04249662071480329, 'discrete': False, 'delay_bounds_min': 2.6990237974216766, 'delay_bounds_max': 12.88804362809139, 'decoder': 'vote_decoder', 'lr': 0.003873961171674314}. Best is trial 10 with value: 0.8633093525179856.
+[I 2026-06-11 19:33:23,793] Trial 23 pruned. 
+[I 2026-06-11 19:51:19,980] Trial 24 finished with value: 0.8608330726722969 and parameters: {'threshold': 0.46628584202750273, 'decay': 'all', 'min_potential': -0.04337032925067536, 'discrete': False, 'delay_bounds_min': 2.8344653744191284, 'delay_bounds_max': 7.950365088679223, 'decoder': 'vote_decoder', 'lr': 0.0046457901099358784}. Best is trial 10 with value: 0.8633093525179856.
+[I 2026-06-11 19:57:15,731] Trial 25 pruned. 
+[I 2026-06-11 20:03:04,151] Trial 26 pruned. 
+[I 2026-06-11 20:20:38,800] Trial 27 finished with value: 0.8625273694088208 and parameters: {'threshold': 0.11366051477940531, 'decay': 'all', 'min_potential': -0.009854648673244572, 'discrete': False, 'delay_bounds_min': 4.5476277477228235, 'delay_bounds_max': 16.649102722175066, 'decoder': 'vote_decoder', 'lr': 0.0033254230910579256}. Best is trial 10 with value: 0.8633093525179856.
+[I 2026-06-11 20:38:06,358] Trial 28 finished with value: 0.8572098842664998 and parameters: {'threshold': 0.1228648017228185, 'decay': 'all', 'min_potential': -0.010184333844592275, 'discrete': False, 'delay_bounds_min': 5.094088106761179, 'delay_bounds_max': 16.5486846010351, 'decoder': 'vote_decoder', 'lr': 0.004531386081745583}. Best is trial 10 with value: 0.8633093525179856.
+[I 2026-06-11 20:55:43,290] Trial 29 pruned. 
+[I 2026-06-11 21:01:32,830] Trial 30 pruned. 
+[I 2026-06-11 21:20:02,249] Trial 31 finished with value: 0.8620060473360442 and parameters: {'threshold': 0.42800754098964633, 'decay': 'all', 'min_potential': -0.022462472039810027, 'discrete': False, 'delay_bounds_min': 3.865996805669897, 'delay_bounds_max': 12.462953159944316, 'decoder': 'vote_decoder', 'lr': 0.0031998475741679177}. Best is trial 10 with value: 0.8633093525179856.
+[I 2026-06-11 21:39:57,708] Trial 32 finished with value: 0.8554895214263372 and parameters: {'threshold': 0.2310088677009668, 'decay': 'all', 'min_potential': -0.029533115176135723, 'discrete': False, 'delay_bounds_min': 4.123872842847195, 'delay_bounds_max': 16.576184414591342, 'decoder': 'vote_decoder', 'lr': 0.0017548568215277152}. Best is trial 10 with value: 0.8633093525179856.
+[I 2026-06-11 22:00:04,205] Trial 33 finished with value: 0.864169533938067 and parameters: {'threshold': 0.3178741116512377, 'decay': 'all', 'min_potential': -0.04404099687824703, 'discrete': False, 'delay_bounds_min': 2.1703847254660205, 'delay_bounds_max': 13.185252763537953, 'decoder': 'vote_decoder', 'lr': 0.0013579572893872463}. Best is trial 33 with value: 0.864169533938067.
+[I 2026-06-11 22:07:28,695] Trial 34 pruned. 
+[I 2026-06-11 22:14:34,871] Trial 35 pruned. 
+[I 2026-06-11 22:21:30,222] Trial 36 pruned. 
+[I 2026-06-11 22:29:20,795] Trial 37 pruned. 
+[I 2026-06-11 22:36:27,621] Trial 38 pruned. 
+[I 2026-06-11 22:43:21,941] Trial 39 pruned. 
+[I 2026-06-11 23:05:01,756] Trial 40 finished with value: 0.8647169221144824 and parameters: {'threshold': 0.3418923991352574, 'decay': 'all', 'min_potential': -0.005680853133370261, 'discrete': False, 'delay_bounds_min': 2.01176771148014, 'delay_bounds_max': 17.161511824129654, 'decoder': 'vote_decoder', 'lr': 0.0023326373792185422}. Best is trial 40 with value: 0.8647169221144824.
+[I 2026-06-11 23:28:10,447] Trial 41 finished with value: 0.8622927744760713 and parameters: {'threshold': 0.3284159412011086, 'decay': 'all', 'min_potential': -0.005629382141702813, 'discrete': False, 'delay_bounds_min': 1.895888059660571, 'delay_bounds_max': 17.43502567207661, 'decoder': 'vote_decoder', 'lr': 0.0025795066104774157}. Best is trial 40 with value: 0.8647169221144824.
+[I 2026-06-11 23:51:06,026] Trial 42 finished with value: 0.8606506099468252 and parameters: {'threshold': 0.3187346796129331, 'decay': 'all', 'min_potential': -0.004539968557524279, 'discrete': False, 'delay_bounds_min': 1.9296621864752734, 'delay_bounds_max': 17.48857700586178, 'decoder': 'vote_decoder', 'lr': 0.002333208520644034}. Best is trial 40 with value: 0.8647169221144824.
+[I 2026-06-11 23:58:16,901] Trial 43 pruned. 
+[I 2026-06-12 00:05:48,509] Trial 44 pruned. 
+[I 2026-06-12 00:13:18,588] Trial 45 pruned. 
+[I 2026-06-12 00:29:03,598] Trial 46 pruned. 
+[I 2026-06-12 00:44:32,317] Trial 47 pruned. 
+[I 2026-06-12 00:52:39,817] Trial 48 pruned. 
+[I 2026-06-12 01:00:20,232] Trial 49 pruned. 
+[I 2026-06-12 01:08:45,349] Trial 50 pruned. 
+[I 2026-06-12 01:16:44,344] Trial 51 pruned. 
+[I 2026-06-12 01:24:59,555] Trial 52 pruned. 
+[I 2026-06-12 01:32:57,574] Trial 53 pruned. 
+[I 2026-06-12 01:56:38,446] Trial 54 finished with value: 0.8622927744760713 and parameters: {'threshold': 0.4601768778816504, 'decay': 'all', 'min_potential': -0.03758952544730531, 'discrete': False, 'delay_bounds_min': 2.321566993793566, 'delay_bounds_max': 14.809746872399527, 'decoder': 'vote_decoder', 'lr': 0.004227667242859303}. Best is trial 40 with value: 0.8647169221144824.
+[I 2026-06-12 02:04:43,876] Trial 55 pruned. 
+[I 2026-06-12 02:30:24,278] Trial 56 pruned. 
+[I 2026-06-12 02:47:51,895] Trial 57 pruned. 
+[I 2026-06-12 03:06:03,956] Trial 58 pruned. 
+[I 2026-06-12 03:15:19,420] Trial 59 pruned. 
+[I 2026-06-12 03:24:56,611] Trial 60 pruned. 
+[I 2026-06-12 03:34:32,639] Trial 61 pruned. 
+[I 2026-06-12 04:04:04,303] Trial 62 pruned. 
+[I 2026-06-12 04:14:22,985] Trial 63 pruned. 
+[I 2026-06-12 04:24:12,119] Trial 64 pruned. 
+[I 2026-06-12 04:53:29,701] Trial 65 finished with value: 0.8616932540923783 and parameters: {'threshold': 0.25559737504001157, 'decay': 'all', 'min_potential': -0.02978553028706864, 'discrete': False, 'delay_bounds_min': 3.8101746705827013, 'delay_bounds_max': 14.474061687261356, 'decoder': 'vote_decoder', 'lr': 0.006213819681979681}. Best is trial 40 with value: 0.8647169221144824.
+[I 2026-06-12 05:03:03,768] Trial 66 pruned. 
+[I 2026-06-12 05:33:36,216] Trial 67 pruned. 
+[I 2026-06-12 05:43:37,549] Trial 68 pruned. 
+[I 2026-06-12 06:05:51,424] Trial 69 pruned. 
+[I 2026-06-12 06:38:41,029] Trial 70 finished with value: 0.8605724116359087 and parameters: {'threshold': 0.4265939563485164, 'decay': 'all', 'min_potential': -0.01601212032152205, 'discrete': False, 'delay_bounds_min': 2.2352956257083916, 'delay_bounds_max': 12.678331079866581, 'decoder': 'vote_decoder', 'lr': 0.0018627281142799094}. Best is trial 40 with value: 0.8647169221144824.
+[I 2026-06-12 07:12:20,891] Trial 71 finished with value: 0.8576790741319987 and parameters: {'threshold': 0.2700978496977535, 'decay': 'all', 'min_potential': -0.032622129549413965, 'discrete': False, 'delay_bounds_min': 3.935769818795829, 'delay_bounds_max': 14.337779391483751, 'decoder': 'vote_decoder', 'lr': 0.006178769393182692}. Best is trial 40 with value: 0.8647169221144824.
+[I 2026-06-12 07:22:50,523] Trial 72 pruned. 
+[I 2026-06-12 07:34:05,649] Trial 73 pruned. 
+[I 2026-06-12 08:08:25,341] Trial 74 finished with value: 0.8648211865290376 and parameters: {'threshold': 0.1449880115316635, 'decay': 'all', 'min_potential': -0.02984041271890488, 'discrete': False, 'delay_bounds_min': 3.1119311798214886, 'delay_bounds_max': 15.941397878504555, 'decoder': 'vote_decoder', 'lr': 0.006911647263448962}. Best is trial 74 with value: 0.8648211865290376.
+[I 2026-06-12 08:43:41,889] Trial 75 finished with value: 0.8610676676050464 and parameters: {'threshold': 0.15598728438816745, 'decay': 'all', 'min_potential': -0.022072364964124985, 'discrete': False, 'delay_bounds_min': 1.5559960874947587, 'delay_bounds_max': 15.997092153511723, 'decoder': 'vote_decoder', 'lr': 0.00948468972774244}. Best is trial 74 with value: 0.8648211865290376.
+[I 2026-06-12 09:08:45,263] Trial 76 pruned. 
+[I 2026-06-12 09:46:18,298] Trial 77 finished with value: 0.8577051402356376 and parameters: {'threshold': 0.15222028180510347, 'decay': 'all', 'min_potential': -0.01246510603690165, 'discrete': False, 'delay_bounds_min': 2.327307336093064, 'delay_bounds_max': 16.795713397149925, 'decoder': 'vote_decoder', 'lr': 0.006955138285418433}. Best is trial 74 with value: 0.8648211865290376.
+[I 2026-06-12 09:59:30,217] Trial 78 pruned. 
+[I 2026-06-12 10:12:18,077] Trial 79 pruned. 
+[I 2026-06-12 10:24:59,091] Trial 80 pruned. 
+[I 2026-06-12 11:04:35,535] Trial 81 pruned. 
+[I 2026-06-12 11:17:24,327] Trial 82 pruned. 
+[I 2026-06-12 11:30:31,329] Trial 83 pruned. 
+[I 2026-06-12 12:12:57,803] Trial 84 finished with value: 0.852935043269732 and parameters: {'threshold': 0.449890175212897, 'decay': 'all', 'min_potential': -0.018931596745952753, 'discrete': False, 'delay_bounds_min': 2.5435370028479825, 'delay_bounds_max': 12.955657374164343, 'decoder': 'vote_decoder', 'lr': 0.0032961476786177606}. Best is trial 74 with value: 0.8648211865290376.
+[I 2026-06-12 12:56:46,574] Trial 85 finished with value: 0.8573923469919716 and parameters: {'threshold': 0.340175770447499, 'decay': 'all', 'min_potential': -0.040644438151210556, 'discrete': False, 'delay_bounds_min': 4.493589457609022, 'delay_bounds_max': 13.881767352047271, 'decoder': 'vote_decoder', 'lr': 0.0036861657953508}. Best is trial 74 with value: 0.8648211865290376.
+[I 2026-06-12 13:11:30,691] Trial 86 pruned. 
+[I 2026-06-12 13:26:20,692] Trial 87 pruned. 
+slurmstepd: error: *** JOB 5853017 ON clrv0801 CANCELLED AT 2026-06-12T13:55:29 DUE TO TIME LIMIT ***

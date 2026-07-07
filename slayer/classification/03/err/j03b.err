@@ -1,0 +1,10 @@
+/lustre/isaac24/scratch/jhanna8/repos/tennlab-slayer/src/tennlab_slayer/train_test.py:314: FutureWarning: `torch.distributed.reduce_op` is deprecated, please use `torch.distributed.ReduceOp` instead
+  if isinstance(obj, _MultiProcessingDataLoaderIter):
+Traceback (most recent call last):
+  File "/lustre/isaac24/proj/UTK0319/jhanna8/repos/2026_ARL_YY/slayer/03/scripts/j03b.py", line 107, in <module>
+    spike_count = torch.sum(slayer_pred, dim=-1)
+TypeError: sum() received an invalid combination of arguments - got (int, dim=int), but expected one of:
+ * (Tensor input, *, torch.dtype dtype = None)
+ * (Tensor input, tuple of ints dim, bool keepdim = False, *, torch.dtype dtype = None, Tensor out = None)
+ * (Tensor input, tuple of names dim, bool keepdim = False, *, torch.dtype dtype = None, Tensor out = None)
+

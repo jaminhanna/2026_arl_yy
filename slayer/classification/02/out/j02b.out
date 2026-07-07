@@ -1,0 +1,415 @@
+WARNING: Prophesee Dataset Toolbox could not be found!
+         Only Prophesee DVS demo will not run properly.
+         Please install it from https://github.com/prophesee-ai/prophesee-automotive-dataset-toolbox
+torch.Size([163074, 1, 39, 31])
+torch.Size([38364, 1, 39, 31])
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+Compiling RISP CUDA kernels... If this takes a long time, delete the cached module (~/.cache/torch_extensions/risp_dynamics_debug)!
+ninja: no work to do.
+RISP CUDA kernels compiled successfully.
+<module 'risp_dynamics_debug_v3' from '/nfs/home/jhanna8/.cache/torch_extensions/py310_cu128/risp_dynamics_debug_v3/risp_dynamics_debug_v3.so'>
+<built-in method risp_dynamics of pybind11_builtins.pybind11_detail_function_record_v1_system_libstdcpp_gxx_abi_1xxx_use_cxx11_abi_1 object at 0x7f8ab4a5f670>
+[Epoch   1/100]     Time: 151.23s
+    Train: loss =    20.21611                          acc = 0.81537 
+    Test : loss =    17.26985                          acc = 0.83982 
+
+[Epoch   2/100]     Time: 68.25s
+    Train: loss =    13.45127 (min =    20.21611)     acc = 0.87764 (max = 0.81537) 
+    Test : loss =    16.87359 (min =    17.26985)     acc = 0.84439 (max = 0.83982) 
+
+[Epoch   3/100]     Time: 74.56s
+    Train: loss =    12.41004 (min =    13.45127)     acc = 0.88597 (max = 0.87764) 
+    Test : loss =    14.73984 (min =    16.87359)     acc = 0.85841 (max = 0.84439) 
+
+[Epoch   4/100]     Time: 70.95s
+    Train: loss =    11.77508 (min =    12.41004)     acc = 0.89158 (max = 0.88597) 
+    Test : loss =    15.66861 (min =    14.73984)     acc = 0.85088 (max = 0.85841) 
+
+[Epoch   5/100]     Time: 74.56s
+    Train: loss =    11.25470 (min =    11.77508)     acc = 0.89564 (max = 0.89158) 
+    Test : loss =    13.94296 (min =    14.73984)     acc = 0.86498 (max = 0.85841) 
+
+[Epoch   6/100]     Time: 62.18s
+    Train: loss =    10.92696 (min =    11.25470)     acc = 0.89864 (max = 0.89564) 
+    Test : loss =    13.92115 (min =    13.94296)     acc = 0.86605 (max = 0.86498) 
+
+[Epoch   7/100]     Time: 78.26s
+    Train: loss =    10.56848 (min =    10.92696)     acc = 0.90158 (max = 0.89864) 
+    Test : loss =    14.02464 (min =    13.92115)     acc = 0.86493 (max = 0.86605) 
+
+[Epoch   8/100]     Time: 76.21s
+    Train: loss =    10.38395 (min =    10.56848)     acc = 0.90379 (max = 0.90158) 
+    Test : loss =    13.94171 (min =    13.92115)     acc = 0.86628 (max = 0.86605) 
+
+[Epoch   9/100]     Time: 67.15s
+    Train: loss =    10.17814 (min =    10.38395)     acc = 0.90525 (max = 0.90379) 
+    Test : loss =    13.45284 (min =    13.92115)     acc = 0.87050 (max = 0.86628) 
+
+[Epoch  10/100]     Time: 77.07s
+    Train: loss =     9.96182 (min =    10.17814)     acc = 0.90699 (max = 0.90525) 
+    Test : loss =    13.58542 (min =    13.45284)     acc = 0.86954 (max = 0.87050) 
+
+[Epoch  11/100]     Time: 75.72s
+    Train: loss =     9.77928 (min =     9.96182)     acc = 0.90943 (max = 0.90699) 
+    Test : loss =    13.23278 (min =    13.45284)     acc = 0.87050 (max = 0.87050) 
+
+[Epoch  12/100]     Time: 75.70s
+    Train: loss =     9.61311 (min =     9.77928)     acc = 0.91037 (max = 0.90943) 
+    Test : loss =    13.45124 (min =    13.23278)     acc = 0.87071 (max = 0.87050) 
+
+[Epoch  13/100]     Time: 78.26s
+    Train: loss =     9.47817 (min =     9.61311)     acc = 0.91200 (max = 0.91037) 
+    Test : loss =    13.34863 (min =    13.23278)     acc = 0.87069 (max = 0.87071) 
+
+[Epoch  14/100]     Time: 64.84s
+    Train: loss =     9.36681 (min =     9.47817)     acc = 0.91259 (max = 0.91200) 
+    Test : loss =    13.21976 (min =    13.23278)     acc = 0.87400 (max = 0.87071) 
+
+[Epoch  15/100]     Time: 67.23s
+    Train: loss =     9.32419 (min =     9.36681)     acc = 0.91246 (max = 0.91259) 
+    Test : loss =    13.03116 (min =    13.21976)     acc = 0.87426 (max = 0.87400) 
+
+[Epoch  16/100]     Time: 61.94s
+    Train: loss =     9.17312 (min =     9.32419)     acc = 0.91424 (max = 0.91259) 
+    Test : loss =    13.45423 (min =    13.03116)     acc = 0.87105 (max = 0.87426) 
+
+[Epoch  17/100]     Time: 62.05s
+    Train: loss =     9.07142 (min =     9.17312)     acc = 0.91533 (max = 0.91424) 
+    Test : loss =    13.18798 (min =    13.03116)     acc = 0.87332 (max = 0.87426) 
+
+[Epoch  18/100]     Time: 62.25s
+    Train: loss =     9.05915 (min =     9.07142)     acc = 0.91498 (max = 0.91533) 
+    Test : loss =    13.41664 (min =    13.03116)     acc = 0.87207 (max = 0.87426) 
+
+[Epoch  19/100]     Time: 65.85s
+    Train: loss =     9.01813 (min =     9.05915)     acc = 0.91698 (max = 0.91533) 
+    Test : loss =    13.27842 (min =    13.03116)     acc = 0.87410 (max = 0.87426) 
+
+[Epoch  20/100]     Time: 78.29s
+    Train: loss =     8.94567 (min =     9.01813)     acc = 0.91703 (max = 0.91698) 
+    Test : loss =    13.21934 (min =    13.03116)     acc = 0.87136 (max = 0.87426) 
+
+[Epoch  21/100]     Time: 77.92s
+    Train: loss =     8.90514 (min =     8.94567)     acc = 0.91762 (max = 0.91703) 
+    Test : loss =    13.02833 (min =    13.03116)     acc = 0.87387 (max = 0.87426) 
+
+[Epoch  22/100]     Time: 78.34s
+    Train: loss =     8.87492 (min =     8.90514)     acc = 0.91785 (max = 0.91762) 
+    Test : loss =    13.22068 (min =    13.02833)     acc = 0.87306 (max = 0.87426) 
+
+[Epoch  23/100]     Time: 62.09s
+    Train: loss =     8.86037 (min =     8.87492)     acc = 0.91840 (max = 0.91785) 
+    Test : loss =    13.92876 (min =    13.02833)     acc = 0.86620 (max = 0.87426) 
+
+[Epoch  24/100]     Time: 75.56s
+    Train: loss =     8.86427 (min =     8.86037)     acc = 0.91818 (max = 0.91840) 
+    Test : loss =    13.25525 (min =    13.02833)     acc = 0.87183 (max = 0.87426) 
+
+[Epoch  25/100]     Time: 78.10s
+    Train: loss =     8.82217 (min =     8.86037)     acc = 0.91779 (max = 0.91840) 
+    Test : loss =    13.16226 (min =    13.02833)     acc = 0.87264 (max = 0.87426) 
+
+[Epoch  26/100]     Time: 78.21s
+    Train: loss =     8.86507 (min =     8.82217)     acc = 0.91826 (max = 0.91840) 
+    Test : loss =    13.12379 (min =    13.02833)     acc = 0.87355 (max = 0.87426) 
+
+[Epoch  27/100]     Time: 72.82s
+    Train: loss =     8.85433 (min =     8.82217)     acc = 0.91831 (max = 0.91840) 
+    Test : loss =    13.03887 (min =    13.02833)     acc = 0.87441 (max = 0.87426) 
+
+[Epoch  28/100]     Time: 76.75s
+    Train: loss =     8.86215 (min =     8.82217)     acc = 0.91869 (max = 0.91840) 
+    Test : loss =    12.89044 (min =    13.02833)     acc = 0.87384 (max = 0.87441) 
+
+[Epoch  29/100]     Time: 76.50s
+    Train: loss =     8.78305 (min =     8.82217)     acc = 0.91880 (max = 0.91869) 
+    Test : loss =    13.16590 (min =    12.89044)     acc = 0.87301 (max = 0.87441) 
+
+[Epoch  30/100]     Time: 78.12s
+    Train: loss =     8.72140 (min =     8.78305)     acc = 0.91986 (max = 0.91880) 
+    Test : loss =    13.09745 (min =    12.89044)     acc = 0.87543 (max = 0.87441) 
+
+[Epoch  31/100]     Time: 78.06s
+    Train: loss =     8.82519 (min =     8.72140)     acc = 0.91890 (max = 0.91986) 
+    Test : loss =    13.11233 (min =    12.89044)     acc = 0.87376 (max = 0.87543) 
+
+[Epoch  32/100]     Time: 72.19s
+    Train: loss =     8.84629 (min =     8.72140)     acc = 0.91869 (max = 0.91986) 
+    Test : loss =    13.31457 (min =    12.89044)     acc = 0.87181 (max = 0.87543) 
+
+[Epoch  33/100]     Time: 62.02s
+    Train: loss =     8.78782 (min =     8.72140)     acc = 0.91918 (max = 0.91986) 
+    Test : loss =    13.82976 (min =    12.89044)     acc = 0.86837 (max = 0.87543) 
+
+[Epoch  34/100]     Time: 71.88s
+    Train: loss =     8.76286 (min =     8.72140)     acc = 0.91957 (max = 0.91986) 
+    Test : loss =    13.08491 (min =    12.89044)     acc = 0.87306 (max = 0.87543) 
+
+[Epoch  35/100]     Time: 78.50s
+    Train: loss =     8.81512 (min =     8.72140)     acc = 0.91879 (max = 0.91986) 
+    Test : loss =    13.33125 (min =    12.89044)     acc = 0.87136 (max = 0.87543) 
+
+[Epoch  36/100]     Time: 71.86s
+    Train: loss =     8.81722 (min =     8.72140)     acc = 0.91910 (max = 0.91986) 
+    Test : loss =    13.01411 (min =    12.89044)     acc = 0.87165 (max = 0.87543) 
+
+[Epoch  37/100]     Time: 78.14s
+    Train: loss =     8.81719 (min =     8.72140)     acc = 0.91935 (max = 0.91986) 
+    Test : loss =    13.18831 (min =    12.89044)     acc = 0.87334 (max = 0.87543) 
+
+[Epoch  38/100]     Time: 75.41s
+    Train: loss =     8.82668 (min =     8.72140)     acc = 0.91939 (max = 0.91986) 
+    Test : loss =    13.90319 (min =    12.89044)     acc = 0.86725 (max = 0.87543) 
+
+[Epoch  39/100]     Time: 77.95s
+    Train: loss =     8.81489 (min =     8.72140)     acc = 0.91898 (max = 0.91986) 
+    Test : loss =    12.98002 (min =    12.89044)     acc = 0.87353 (max = 0.87543) 
+
+[Epoch  40/100]     Time: 78.06s
+    Train: loss =     8.83093 (min =     8.72140)     acc = 0.91885 (max = 0.91986) 
+    Test : loss =    13.08789 (min =    12.89044)     acc = 0.87238 (max = 0.87543) 
+
+[Epoch  41/100]     Time: 75.30s
+    Train: loss =     8.88688 (min =     8.72140)     acc = 0.91904 (max = 0.91986) 
+    Test : loss =    13.10656 (min =    12.89044)     acc = 0.87387 (max = 0.87543) 
+
+[Epoch  42/100]     Time: 67.01s
+    Train: loss =     8.86547 (min =     8.72140)     acc = 0.91923 (max = 0.91986) 
+    Test : loss =    13.02167 (min =    12.89044)     acc = 0.87426 (max = 0.87543) 
+
+[Epoch  43/100]     Time: 78.12s
+    Train: loss =     8.91197 (min =     8.72140)     acc = 0.91852 (max = 0.91986) 
+    Test : loss =    13.34552 (min =    12.89044)     acc = 0.87066 (max = 0.87543) 
+
+[Epoch  44/100]     Time: 64.67s
+    Train: loss =     8.89216 (min =     8.72140)     acc = 0.91859 (max = 0.91986) 
+    Test : loss =    13.07575 (min =    12.89044)     acc = 0.87269 (max = 0.87543) 
+
+[Epoch  45/100]     Time: 78.09s
+    Train: loss =     8.89717 (min =     8.72140)     acc = 0.91848 (max = 0.91986) 
+    Test : loss =    13.25445 (min =    12.89044)     acc = 0.87131 (max = 0.87543) 
+
+[Epoch  46/100]     Time: 64.90s
+    Train: loss =     8.87323 (min =     8.72140)     acc = 0.91861 (max = 0.91986) 
+    Test : loss =    13.08263 (min =    12.89044)     acc = 0.87238 (max = 0.87543) 
+
+[Epoch  47/100]     Time: 79.23s
+    Train: loss =     8.91852 (min =     8.72140)     acc = 0.91791 (max = 0.91986) 
+    Test : loss =    13.41960 (min =    12.89044)     acc = 0.87256 (max = 0.87543) 
+
+[Epoch  48/100]     Time: 72.57s
+    Train: loss =     8.89199 (min =     8.72140)     acc = 0.91837 (max = 0.91986) 
+    Test : loss =    13.34373 (min =    12.89044)     acc = 0.87142 (max = 0.87543) 
+
+[Epoch  49/100]     Time: 78.43s
+    Train: loss =     8.93070 (min =     8.72140)     acc = 0.91835 (max = 0.91986) 
+    Test : loss =    13.29470 (min =    12.89044)     acc = 0.87116 (max = 0.87543) 
+
+[Epoch  50/100]     Time: 78.53s
+    Train: loss =     8.94048 (min =     8.72140)     acc = 0.91787 (max = 0.91986) 
+    Test : loss =    13.38432 (min =    12.89044)     acc = 0.87162 (max = 0.87543) 
+
+[Epoch  51/100]     Time: 64.61s
+    Train: loss =     8.92337 (min =     8.72140)     acc = 0.91804 (max = 0.91986) 
+    Test : loss =    13.18458 (min =    12.89044)     acc = 0.87410 (max = 0.87543) 
+
+[Epoch  52/100]     Time: 62.01s
+    Train: loss =     8.98818 (min =     8.72140)     acc = 0.91749 (max = 0.91986) 
+    Test : loss =    13.19503 (min =    12.89044)     acc = 0.87147 (max = 0.87543) 
+
+[Epoch  53/100]     Time: 62.02s
+    Train: loss =     8.99251 (min =     8.72140)     acc = 0.91763 (max = 0.91986) 
+    Test : loss =    13.14132 (min =    12.89044)     acc = 0.87329 (max = 0.87543) 
+
+[Epoch  54/100]     Time: 62.09s
+    Train: loss =     8.99235 (min =     8.72140)     acc = 0.91801 (max = 0.91986) 
+    Test : loss =    13.15782 (min =    12.89044)     acc = 0.87280 (max = 0.87543) 
+
+[Epoch  55/100]     Time: 64.60s
+    Train: loss =     9.01616 (min =     8.72140)     acc = 0.91750 (max = 0.91986) 
+    Test : loss =    13.05531 (min =    12.89044)     acc = 0.87342 (max = 0.87543) 
+
+[Epoch  56/100]     Time: 74.05s
+    Train: loss =     9.01848 (min =     8.72140)     acc = 0.91742 (max = 0.91986) 
+    Test : loss =    13.11788 (min =    12.89044)     acc = 0.87228 (max = 0.87543) 
+
+[Epoch  57/100]     Time: 75.63s
+    Train: loss =     9.05700 (min =     8.72140)     acc = 0.91703 (max = 0.91986) 
+    Test : loss =    13.18294 (min =    12.89044)     acc = 0.87155 (max = 0.87543) 
+
+[Epoch  58/100]     Time: 75.28s
+    Train: loss =     9.06583 (min =     8.72140)     acc = 0.91687 (max = 0.91986) 
+    Test : loss =    13.10234 (min =    12.89044)     acc = 0.87374 (max = 0.87543) 
+
+[Epoch  59/100]     Time: 77.88s
+    Train: loss =     9.13525 (min =     8.72140)     acc = 0.91562 (max = 0.91986) 
+    Test : loss =    13.19006 (min =    12.89044)     acc = 0.86990 (max = 0.87543) 
+
+[Epoch  60/100]     Time: 78.12s
+    Train: loss =     9.11050 (min =     8.72140)     acc = 0.91685 (max = 0.91986) 
+    Test : loss =    13.36244 (min =    12.89044)     acc = 0.87162 (max = 0.87543) 
+
+[Epoch  61/100]     Time: 77.99s
+    Train: loss =     9.15155 (min =     8.72140)     acc = 0.91650 (max = 0.91986) 
+    Test : loss =    13.12931 (min =    12.89044)     acc = 0.87306 (max = 0.87543) 
+
+[Epoch  62/100]     Time: 78.24s
+    Train: loss =     9.16507 (min =     8.72140)     acc = 0.91565 (max = 0.91986) 
+    Test : loss =    13.24918 (min =    12.89044)     acc = 0.87319 (max = 0.87543) 
+
+[Epoch  63/100]     Time: 75.50s
+    Train: loss =     9.16499 (min =     8.72140)     acc = 0.91628 (max = 0.91986) 
+    Test : loss =    13.33760 (min =    12.89044)     acc = 0.87178 (max = 0.87543) 
+
+[Epoch  64/100]     Time: 62.31s
+    Train: loss =     9.16849 (min =     8.72140)     acc = 0.91637 (max = 0.91986) 
+    Test : loss =    13.33963 (min =    12.89044)     acc = 0.87202 (max = 0.87543) 
+
+[Epoch  65/100]     Time: 61.72s
+    Train: loss =     9.18963 (min =     8.72140)     acc = 0.91544 (max = 0.91986) 
+    Test : loss =    13.42772 (min =    12.89044)     acc = 0.87092 (max = 0.87543) 
+
+[Epoch  66/100]     Time: 77.82s
+    Train: loss =     9.22565 (min =     8.72140)     acc = 0.91533 (max = 0.91986) 
+    Test : loss =    13.18406 (min =    12.89044)     acc = 0.87290 (max = 0.87543) 
+
+[Epoch  67/100]     Time: 62.05s
+    Train: loss =     9.28511 (min =     8.72140)     acc = 0.91492 (max = 0.91986) 
+    Test : loss =    14.03003 (min =    12.89044)     acc = 0.86493 (max = 0.87543) 
+
+[Epoch  68/100]     Time: 61.99s
+    Train: loss =     9.27633 (min =     8.72140)     acc = 0.91484 (max = 0.91986) 
+    Test : loss =    13.44923 (min =    12.89044)     acc = 0.86983 (max = 0.87543) 
+
+[Epoch  69/100]     Time: 77.79s
+    Train: loss =     9.29405 (min =     8.72140)     acc = 0.91527 (max = 0.91986) 
+    Test : loss =    13.35696 (min =    12.89044)     acc = 0.87126 (max = 0.87543) 
+
+[Epoch  70/100]     Time: 71.96s
+    Train: loss =     9.29858 (min =     8.72140)     acc = 0.91545 (max = 0.91986) 
+    Test : loss =    13.57076 (min =    12.89044)     acc = 0.86917 (max = 0.87543) 
+
+[Epoch  71/100]     Time: 67.58s
+    Train: loss =     9.30664 (min =     8.72140)     acc = 0.91476 (max = 0.91986) 
+    Test : loss =    13.31613 (min =    12.89044)     acc = 0.87256 (max = 0.87543) 
+
+[Epoch  72/100]     Time: 61.89s
+    Train: loss =     9.33892 (min =     8.72140)     acc = 0.91484 (max = 0.91986) 
+    Test : loss =    13.50858 (min =    12.89044)     acc = 0.86985 (max = 0.87543) 
+
+[Epoch  73/100]     Time: 77.98s
+    Train: loss =     9.32365 (min =     8.72140)     acc = 0.91504 (max = 0.91986) 
+    Test : loss =    13.47622 (min =    12.89044)     acc = 0.87040 (max = 0.87543) 
+
+[Epoch  74/100]     Time: 67.86s
+    Train: loss =     9.40690 (min =     8.72140)     acc = 0.91352 (max = 0.91986) 
+    Test : loss =    13.38773 (min =    12.89044)     acc = 0.87043 (max = 0.87543) 
+
+[Epoch  75/100]     Time: 77.80s
+    Train: loss =     9.38403 (min =     8.72140)     acc = 0.91428 (max = 0.91986) 
+    Test : loss =    13.45306 (min =    12.89044)     acc = 0.87196 (max = 0.87543) 
+
+[Epoch  76/100]     Time: 77.99s
+    Train: loss =     9.39372 (min =     8.72140)     acc = 0.91446 (max = 0.91986) 
+    Test : loss =    13.58334 (min =    12.89044)     acc = 0.87016 (max = 0.87543) 
+
+[Epoch  77/100]     Time: 77.53s
+    Train: loss =     9.43530 (min =     8.72140)     acc = 0.91349 (max = 0.91986) 
+    Test : loss =    13.64723 (min =    12.89044)     acc = 0.86774 (max = 0.87543) 
+
+[Epoch  78/100]     Time: 78.23s
+    Train: loss =     9.40241 (min =     8.72140)     acc = 0.91427 (max = 0.91986) 
+    Test : loss =    13.53797 (min =    12.89044)     acc = 0.86949 (max = 0.87543) 
+
+[Epoch  79/100]     Time: 73.46s
+    Train: loss =     9.38944 (min =     8.72140)     acc = 0.91424 (max = 0.91986) 
+    Test : loss =    13.44635 (min =    12.89044)     acc = 0.86923 (max = 0.87543) 
+
+[Epoch  80/100]     Time: 77.99s
+    Train: loss =     9.43294 (min =     8.72140)     acc = 0.91390 (max = 0.91986) 
+    Test : loss =    13.44788 (min =    12.89044)     acc = 0.87019 (max = 0.87543) 
+
+[Epoch  81/100]     Time: 61.97s
+    Train: loss =     9.44796 (min =     8.72140)     acc = 0.91374 (max = 0.91986) 
+    Test : loss =    13.46602 (min =    12.89044)     acc = 0.87003 (max = 0.87543) 
+
+[Epoch  82/100]     Time: 78.03s
+    Train: loss =     9.50297 (min =     8.72140)     acc = 0.91311 (max = 0.91986) 
+    Test : loss =    13.52931 (min =    12.89044)     acc = 0.86758 (max = 0.87543) 
+
+[Epoch  83/100]     Time: 78.14s
+    Train: loss =     9.50619 (min =     8.72140)     acc = 0.91373 (max = 0.91986) 
+    Test : loss =    13.37206 (min =    12.89044)     acc = 0.87079 (max = 0.87543) 
+
+[Epoch  84/100]     Time: 78.02s
+    Train: loss =     9.51012 (min =     8.72140)     acc = 0.91300 (max = 0.91986) 
+    Test : loss =    13.41400 (min =    12.89044)     acc = 0.87082 (max = 0.87543) 
+
+[Epoch  85/100]     Time: 78.12s
+    Train: loss =     9.53196 (min =     8.72140)     acc = 0.91288 (max = 0.91986) 
+    Test : loss =    13.53594 (min =    12.89044)     acc = 0.86946 (max = 0.87543) 
+
+[Epoch  86/100]     Time: 73.54s
+    Train: loss =     9.56174 (min =     8.72140)     acc = 0.91301 (max = 0.91986) 
+    Test : loss =    13.97756 (min =    12.89044)     acc = 0.86610 (max = 0.87543) 
+
+[Epoch  87/100]     Time: 78.08s
+    Train: loss =     9.53316 (min =     8.72140)     acc = 0.91382 (max = 0.91986) 
+    Test : loss =    13.43555 (min =    12.89044)     acc = 0.87084 (max = 0.87543) 
+
+[Epoch  88/100]     Time: 73.14s
+    Train: loss =     9.54347 (min =     8.72140)     acc = 0.91338 (max = 0.91986) 
+    Test : loss =    13.46584 (min =    12.89044)     acc = 0.86993 (max = 0.87543) 
+
+[Epoch  89/100]     Time: 77.91s
+    Train: loss =     9.57215 (min =     8.72140)     acc = 0.91290 (max = 0.91986) 
+    Test : loss =    13.79413 (min =    12.89044)     acc = 0.87014 (max = 0.87543) 
+
+[Epoch  90/100]     Time: 77.89s
+    Train: loss =     9.64391 (min =     8.72140)     acc = 0.91286 (max = 0.91986) 
+    Test : loss =    13.45677 (min =    12.89044)     acc = 0.87063 (max = 0.87543) 
+
+[Epoch  91/100]     Time: 65.07s
+    Train: loss =     9.62373 (min =     8.72140)     acc = 0.91227 (max = 0.91986) 
+    Test : loss =    13.40082 (min =    12.89044)     acc = 0.86925 (max = 0.87543) 
+
+[Epoch  92/100]     Time: 76.50s
+    Train: loss =     9.60527 (min =     8.72140)     acc = 0.91312 (max = 0.91986) 
+    Test : loss =    13.68202 (min =    12.89044)     acc = 0.86805 (max = 0.87543) 
+
+[Epoch  93/100]     Time: 75.39s
+    Train: loss =     9.65089 (min =     8.72140)     acc = 0.91178 (max = 0.91986) 
+    Test : loss =    13.40696 (min =    12.89044)     acc = 0.87043 (max = 0.87543) 
+
+[Epoch  94/100]     Time: 73.12s
+    Train: loss =     9.63033 (min =     8.72140)     acc = 0.91191 (max = 0.91986) 
+    Test : loss =    13.66744 (min =    12.89044)     acc = 0.86818 (max = 0.87543) 
+
+[Epoch  95/100]     Time: 78.03s
+    Train: loss =     9.60330 (min =     8.72140)     acc = 0.91259 (max = 0.91986) 
+    Test : loss =    13.57515 (min =    12.89044)     acc = 0.86844 (max = 0.87543) 
+
+[Epoch  96/100]     Time: 61.71s
+    Train: loss =     9.61745 (min =     8.72140)     acc = 0.91230 (max = 0.91986) 
+    Test : loss =    13.44647 (min =    12.89044)     acc = 0.87043 (max = 0.87543) 
+
+[Epoch  97/100]     Time: 61.70s
+    Train: loss =     9.66422 (min =     8.72140)     acc = 0.91171 (max = 0.91986) 
+    Test : loss =    13.47602 (min =    12.89044)     acc = 0.86904 (max = 0.87543) 
+
+[Epoch  98/100]     Time: 77.97s
+    Train: loss =     9.69332 (min =     8.72140)     acc = 0.91210 (max = 0.91986) 
+    Test : loss =    13.63332 (min =    12.89044)     acc = 0.86899 (max = 0.87543) 
+
+[Epoch  99/100]     Time: 61.75s
+    Train: loss =     9.64142 (min =     8.72140)     acc = 0.91199 (max = 0.91986) 
+    Test : loss =    13.49489 (min =    12.89044)     acc = 0.86975 (max = 0.87543) 
+
+[Epoch 100/100]     Time: 78.01s
+    Train: loss =     9.64503 (min =     8.72140)     acc = 0.91215 (max = 0.91986) 
+    Test : loss =    13.57662 (min =    12.89044)     acc = 0.86842 (max = 0.87543) 
+
+Total training time: 7333.92s
+
+Number of Nodes: 1065
+Number of Edges: 283136

@@ -1,0 +1,1241 @@
+WARNING: Prophesee Dataset Toolbox could not be found!
+         Only Prophesee DVS demo will not run properly.
+         Please install it from https://github.com/prophesee-ai/prophesee-automotive-dataset-toolbox
+torch.Size([163074, 31, 39, 25])
+torch.Size([38364, 31, 39, 25])
+torch.Size([1, 31, 39, 25]) tensor(0)
+Train size: 163074
+Test size: 38364
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+Compiling RISP CUDA kernels... If this takes a long time, delete the cached module (~/.cache/torch_extensions/risp_dynamics_debug)!
+[1/2] /usr/local/cuda/bin/nvcc --generate-dependencies-with-compile --dependency-output risp.cuda.o.d -DTORCH_EXTENSION_NAME=risp_dynamics_debug_v3 -DTORCH_API_INCLUDE_EXTENSION_H -isystem /lustre/isaac24/proj/UTK0319/jhanna8/.conda/envs/tennlab_slayer/lib/python3.10/site-packages/torch/include -isystem /lustre/isaac24/proj/UTK0319/jhanna8/.conda/envs/tennlab_slayer/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include -isystem /lustre/isaac24/proj/UTK0319/jhanna8/.conda/envs/tennlab_slayer/include/python3.10 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr -gencode=arch=compute_75,code=sm_75 --compiler-options '-fPIC' -std=c++17 -c /lustre/isaac24/scratch/jhanna8/repos/tennlab-slayer/src/tennlab_slayer/slayer_rewrites/neuron/dynamics/risp.cu -o risp.cuda.o 
+/lustre/isaac24/scratch/jhanna8/repos/tennlab-slayer/src/tennlab_slayer/slayer_rewrites/neuron/dynamics/risp.cu(196): warning #177-D: variable "dy_t_dV_post" was declared but never referenced
+          const float dy_t_dV_post = 1.0f / w;
+                      ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/lustre/isaac24/scratch/jhanna8/repos/tennlab-slayer/src/tennlab_slayer/slayer_rewrites/neuron/dynamics/risp.cu(170): warning #177-D: variable "has_decay" was declared but never referenced
+      const bool has_decay = (v_decay > 0.0f);
+                 ^
+
+[2/2] c++ risp.cuda.o -shared -L/lustre/isaac24/proj/UTK0319/jhanna8/.conda/envs/tennlab_slayer/lib/python3.10/site-packages/torch/lib -lc10 -lc10_cuda -ltorch_cpu -ltorch_cuda -ltorch -ltorch_python -L/usr/local/cuda/lib64 -lcudart -o risp_dynamics_debug_v3.so
+RISP CUDA kernels compiled successfully.
+<module 'risp_dynamics_debug_v3' from '/nfs/home/jhanna8/.cache/torch_extensions/py310_cu128/risp_dynamics_debug_v3/risp_dynamics_debug_v3.so'>
+<built-in method risp_dynamics of pybind11_builtins.pybind11_detail_function_record_v1_system_libstdcpp_gxx_abi_1xxx_use_cxx11_abi_1 object at 0x7f55853bbb10>
+[Epoch   1/3]     Time: 370.70s
+    Train: loss =    32.49751                          acc = 0.50000 
+    Test : loss =    32.49146                          acc = 0.50000 
+
+[Epoch   2/3]     Time: 195.74s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+[Epoch   3/3]     Time: 196.02s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+Total training time: 762.55s
+
+[Trial 1/100,   Sub-Trial 1/1]:     Time: 762.91s
+  accuracy: 0.500
+[Epoch   1/3]     Time: 195.60s
+    Train: loss =    32.49751                          acc = 0.50000 
+    Test : loss =    32.49146                          acc = 0.50000 
+
+[Epoch   2/3]     Time: 196.42s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+[Epoch   3/3]     Time: 196.01s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+Total training time: 588.12s
+
+[Trial 2/100,   Sub-Trial 1/1]:     Time: 588.24s
+  accuracy: 0.500
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 196.89s
+    Train: loss =    32.49751                          acc = 0.50000 
+    Test : loss =    32.49146                          acc = 0.50000 
+
+[Epoch   2/3]     Time: 196.71s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+[Epoch   3/3]     Time: 196.83s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+Total training time: 590.51s
+
+[Trial 3/100,   Sub-Trial 1/1]:     Time: 590.63s
+  accuracy: 0.500
+[Epoch   1/3]     Time: 195.77s
+    Train: loss =    32.49751                          acc = 0.50000 
+    Test : loss =    32.49146                          acc = 0.50000 
+
+[Epoch   2/3]     Time: 196.14s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+[Epoch   3/3]     Time: 195.44s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+Total training time: 587.43s
+
+[Trial 4/100,   Sub-Trial 1/1]:     Time: 587.55s
+  accuracy: 0.500
+[Epoch   1/3]     Time: 196.55s
+    Train: loss =    32.49751                          acc = 0.50000 
+    Test : loss =    32.49146                          acc = 0.50000 
+
+[Epoch   2/3]     Time: 196.43s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+[Epoch   3/3]     Time: 196.46s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+Total training time: 589.51s
+
+[Trial 5/100,   Sub-Trial 1/1]:     Time: 589.63s
+  accuracy: 0.500
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 196.66s
+    Train: loss =    32.49751                          acc = 0.50000 
+    Test : loss =    32.49146                          acc = 0.50000 
+
+[Epoch   2/3]     Time: 196.57s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+[Epoch   3/3]     Time: 196.28s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+Total training time: 589.60s
+
+[Trial 6/100,   Sub-Trial 1/1]:     Time: 589.73s
+  accuracy: 0.500
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 199.49s
+    Train: loss =    32.49751                          acc = 0.50000 
+    Test : loss =    32.49146                          acc = 0.50000 
+
+[Epoch   2/3]     Time: 201.99s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+[Epoch   3/3]     Time: 196.66s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+Total training time: 598.38s
+
+[Trial 7/100,   Sub-Trial 1/1]:     Time: 598.60s
+  accuracy: 0.500
+[Epoch   1/3]     Time: 196.66s
+    Train: loss =    32.49751                          acc = 0.50000 
+    Test : loss =    32.49146                          acc = 0.50000 
+
+[Epoch   2/3]     Time: 199.60s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+[Epoch   3/3]     Time: 200.59s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+Total training time: 596.94s
+
+[Trial 8/100,   Sub-Trial 1/1]:     Time: 597.10s
+  accuracy: 0.500
+[Epoch   1/3]     Time: 200.19s
+    Train: loss =     6.82045                          acc = 0.81877 
+    Test : loss =     6.26949                          acc = 0.82160 
+
+[Epoch   2/3]     Time: 200.09s
+    Train: loss =     5.26754 (min =     6.82045)     acc = 0.85534 (max = 0.81877) 
+    Test : loss =     5.97211 (min =     6.26949)     acc = 0.83234 (max = 0.82160) 
+
+[Epoch   3/3]     Time: 199.67s
+    Train: loss =     4.94497 (min =     5.26754)     acc = 0.86617 (max = 0.85534) 
+    Test : loss =     5.65429 (min =     5.97211)     acc = 0.83831 (max = 0.83234) 
+
+Total training time: 600.03s
+
+[Trial 9/100,   Sub-Trial 1/1]:     Time: 600.20s
+  accuracy: 0.838
+[Epoch   1/3]     Time: 200.40s
+    Train: loss =    32.49751                          acc = 0.50000 
+    Test : loss =    32.49146                          acc = 0.50000 
+
+[Epoch   2/3]     Time: 199.63s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+[Epoch   3/3]     Time: 199.31s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+Total training time: 599.42s
+
+[Trial 10/100,   Sub-Trial 1/1]:     Time: 599.58s
+  accuracy: 0.500
+[Epoch   1/3]     Time: 199.74s
+    Train: loss =     7.60986                          acc = 0.83790 
+    Test : loss =     8.00245                          acc = 0.83789 
+
+[Epoch   2/3]     Time: 199.31s
+    Train: loss =     6.62853 (min =     7.60986)     acc = 0.86789 (max = 0.83790) 
+    Test : loss =     6.77786 (min =     8.00245)     acc = 0.84725 (max = 0.83789) 
+
+[Epoch   3/3]     Time: 196.51s
+    Train: loss =     6.47484 (min =     6.62853)     acc = 0.87202 (max = 0.86789) 
+    Test : loss =     7.70949 (min =     6.77786)     acc = 0.84730 (max = 0.84725) 
+
+Total training time: 595.63s
+
+[Trial 11/100,   Sub-Trial 1/1]:     Time: 595.81s
+  accuracy: 0.847
+[Epoch   1/3]     Time: 196.54s
+    Train: loss =    26.14253                          acc = 0.57670 
+    Test : loss =    31.60277                          acc = 0.50000 
+
+[Epoch   2/3]     Time: 197.44s
+    Train: loss =    24.31299 (min =    26.14253)     acc = 0.60002 (max = 0.57670) 
+    Test : loss =    28.93903 (min =    31.60277)     acc = 0.50000 (max = 0.50000) 
+
+[Epoch   3/3]     Time: 197.66s
+    Train: loss =    22.96995 (min =    24.31299)     acc = 0.61475 (max = 0.60002) 
+    Test : loss =    24.89506 (min =    28.93903)     acc = 0.50000 (max = 0.50000) 
+
+Total training time: 591.73s
+
+[Trial 12/100,   Sub-Trial 1/1]:     Time: 591.86s
+  accuracy: 0.500
+[Epoch   1/3]     Time: 196.66s
+    Train: loss =     7.54744                          acc = 0.84163 
+    Test : loss =     7.94067                          acc = 0.82624 
+
+[Epoch   2/3]     Time: 196.59s
+    Train: loss =     6.72742 (min =     7.54744)     acc = 0.86471 (max = 0.84163) 
+    Test : loss =     7.37831 (min =     7.94067)     acc = 0.83975 (max = 0.82624) 
+
+[Epoch   3/3]     Time: 197.68s
+    Train: loss =     6.47904 (min =     6.72742)     acc = 0.86997 (max = 0.86471) 
+    Test : loss =     7.60496 (min =     7.37831)     acc = 0.84749 (max = 0.83975) 
+
+Total training time: 591.02s
+
+[Trial 13/100,   Sub-Trial 1/1]:     Time: 591.21s
+  accuracy: 0.847
+[Epoch   1/3]     Time: 196.83s
+    Train: loss =    10.09461                          acc = 0.81416 
+    Test : loss =     9.64083                          acc = 0.78545 
+
+[Epoch   2/3]     Time: 197.95s
+    Train: loss =     9.63833 (min =    10.09461)     acc = 0.83536 (max = 0.81416) 
+    Test : loss =    11.34465 (min =     9.64083)     acc = 0.81342 (max = 0.78545) 
+
+[Epoch   3/3]     Time: 196.85s
+    Train: loss =     9.85265 (min =     9.63833)     acc = 0.83905 (max = 0.83536) 
+    Test : loss =    12.21584 (min =     9.64083)     acc = 0.76077 (max = 0.81342) 
+
+Total training time: 591.73s
+
+[Trial 14/100,   Sub-Trial 1/1]:     Time: 591.86s
+  accuracy: 0.761
+[Epoch   1/3]     Time: 196.90s
+    Train: loss =     7.92126                          acc = 0.82940 
+    Test : loss =     7.71067                          acc = 0.85028 
+
+[Epoch   2/3]     Time: 197.55s
+    Train: loss =     6.96504 (min =     7.92126)     acc = 0.88202 (max = 0.82940) 
+    Test : loss =     7.43182 (min =     7.71067)     acc = 0.85570 (max = 0.85028) 
+
+[Epoch   3/3]     Time: 197.30s
+    Train: loss =     6.87471 (min =     6.96504)     acc = 0.88743 (max = 0.88202) 
+    Test : loss =     7.42120 (min =     7.43182)     acc = 0.85591 (max = 0.85570) 
+
+Total training time: 591.86s
+
+[Trial 15/100,   Sub-Trial 1/1]:     Time: 592.00s
+  accuracy: 0.856
+[Epoch   1/3]     Time: 196.81s
+    Train: loss =    10.62330                          acc = 0.80338 
+    Test : loss =    10.22325                          acc = 0.85030 
+
+[Epoch   2/3]     Time: 196.09s
+    Train: loss =     9.82297 (min =    10.62330)     acc = 0.87455 (max = 0.80338) 
+    Test : loss =    10.17905 (min =    10.22325)     acc = 0.83717 (max = 0.85030) 
+
+[Epoch   3/3]     Time: 196.59s
+    Train: loss =     9.74735 (min =     9.82297)     acc = 0.88106 (max = 0.87455) 
+    Test : loss =    10.20549 (min =    10.17905)     acc = 0.85200 (max = 0.85030) 
+
+Total training time: 589.56s
+
+[Trial 16/100,   Sub-Trial 1/1]:     Time: 589.69s
+  accuracy: 0.852
+[Epoch   1/3]     Time: 196.87s
+    Train: loss =    12.67617                          acc = 0.50000 
+    Test : loss =    12.49672                          acc = 0.50000 
+
+[Epoch   2/3]     Time: 197.90s
+    Train: loss =    11.42439 (min =    12.67617)     acc = 0.66627 (max = 0.50000) 
+    Test : loss =    10.26278 (min =    12.49672)     acc = 0.84123 (max = 0.50000) 
+
+[Epoch   3/3]     Time: 196.97s
+    Train: loss =     9.81539 (min =    11.42439)     acc = 0.87351 (max = 0.66627) 
+    Test : loss =    10.09908 (min =    10.26278)     acc = 0.85361 (max = 0.84123) 
+
+Total training time: 591.89s
+
+[Trial 17/100,   Sub-Trial 1/1]:     Time: 592.09s
+  accuracy: 0.854
+[Epoch   1/3]     Time: 197.11s
+    Train: loss =    12.26378                          acc = 0.55241 
+    Test : loss =    11.25007                          acc = 0.50000 
+
+[Epoch   2/3]     Time: 199.56s
+    Train: loss =    10.86934 (min =    12.26378)     acc = 0.55413 (max = 0.55241) 
+    Test : loss =    10.26011 (min =    11.25007)     acc = 0.84723 (max = 0.50000) 
+
+[Epoch   3/3]     Time: 199.84s
+    Train: loss =     9.77948 (min =    10.86934)     acc = 0.87766 (max = 0.55413) 
+    Test : loss =    10.11674 (min =    10.26011)     acc = 0.85304 (max = 0.84723) 
+
+Total training time: 596.61s
+
+[Trial 18/100,   Sub-Trial 1/1]:     Time: 596.79s
+  accuracy: 0.853
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 199.90s
+    Train: loss =    15.39968                          acc = 0.49989 
+    Test : loss =    15.13602                          acc = 0.50000 
+
+[Epoch   2/3]     Time: 200.51s
+    Train: loss =    15.13884 (min =    15.39968)     acc = 0.50000 (max = 0.49989) 
+    Test : loss =    15.13602 (min =    15.13602)     acc = 0.50000 (max = 0.50000) 
+
+[Epoch   3/3]     Time: 196.17s
+    Train: loss =    15.13884 (min =    15.13884)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    15.13602 (min =    15.13602)     acc = 0.50000 (max = 0.50000) 
+
+Total training time: 596.67s
+
+[Trial 19/100,   Sub-Trial 1/1]:     Time: 596.80s
+  accuracy: 0.500
+[Epoch   1/3]     Time: 196.31s
+    Train: loss =     7.12400                          acc = 0.84280 
+    Test : loss =     8.67006                          acc = 0.82233 
+
+[Epoch   2/3]     Time: 198.41s
+    Train: loss =     6.53482 (min =     7.12400)     acc = 0.86469 (max = 0.84280) 
+    Test : loss =     6.86733 (min =     8.67006)     acc = 0.84089 (max = 0.82233) 
+
+[Epoch   3/3]     Time: 197.35s
+    Train: loss =     6.34511 (min =     6.53482)     acc = 0.87124 (max = 0.86469) 
+    Test : loss =     6.81006 (min =     6.86733)     acc = 0.84710 (max = 0.84089) 
+
+Total training time: 592.23s
+
+[Trial 20/100,   Sub-Trial 1/1]:     Time: 592.42s
+  accuracy: 0.847
+[Epoch   1/3]     Time: 198.05s
+    Train: loss =    26.61136                          acc = 0.49998 
+    Test : loss =    26.57449                          acc = 0.50000 
+
+[Epoch   2/3]     Time: 197.34s
+    Train: loss =    26.57792 (min =    26.61136)     acc = 0.50000 (max = 0.49998) 
+    Test : loss =    26.57449 (min =    26.57449)     acc = 0.50000 (max = 0.50000) 
+
+[Epoch   3/3]     Time: 197.14s
+    Train: loss =    26.57792 (min =    26.57792)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    26.57449 (min =    26.57449)     acc = 0.50000 (max = 0.50000) 
+
+Total training time: 592.61s
+
+[Trial 21/100,   Sub-Trial 1/1]:     Time: 592.74s
+  accuracy: 0.500
+[Epoch   1/3]     Time: 196.43s
+    Train: loss =     7.95631                          acc = 0.85408 
+    Test : loss =     7.45289                          acc = 0.84582 
+
+[Epoch   2/3]     Time: 196.63s
+    Train: loss =     6.59170 (min =     7.95631)     acc = 0.88636 (max = 0.85408) 
+    Test : loss =     7.18300 (min =     7.45289)     acc = 0.85669 (max = 0.84582) 
+
+[Epoch   3/3]     Time: 196.95s
+    Train: loss =     6.43811 (min =     6.59170)     acc = 0.89359 (max = 0.88636) 
+    Test : loss =     7.22164 (min =     7.18300)     acc = 0.85864 (max = 0.85669) 
+
+Total training time: 590.08s
+
+[Trial 22/100,   Sub-Trial 1/1]:     Time: 590.22s
+  accuracy: 0.859
+[Epoch   1/3]     Time: 197.00s
+    Train: loss =     6.77752                          acc = 0.86021 
+    Test : loss =     6.70300                          acc = 0.85207 
+
+[Epoch   2/3]     Time: 195.87s
+    Train: loss =     5.85982 (min =     6.77752)     acc = 0.88559 (max = 0.86021) 
+    Test : loss =     6.50193 (min =     6.70300)     acc = 0.85333 (max = 0.85207) 
+
+[Epoch   3/3]     Time: 196.49s
+    Train: loss =     5.74062 (min =     5.85982)     acc = 0.89197 (max = 0.88559) 
+    Test : loss =     6.38401 (min =     6.50193)     acc = 0.85937 (max = 0.85333) 
+
+Total training time: 589.44s
+
+[Trial 23/100,   Sub-Trial 1/1]:     Time: 589.58s
+  accuracy: 0.859
+[Epoch   1/3]     Time: 197.92s
+    Train: loss =     7.21303                          acc = 0.84134 
+    Test : loss =     7.12089                          acc = 0.84916 
+
+[Epoch   2/3]     Time: 198.85s
+    Train: loss =     5.77620 (min =     7.21303)     acc = 0.89026 (max = 0.84134) 
+    Test : loss =     7.15501 (min =     7.12089)     acc = 0.84712 (max = 0.84916) 
+
+[Epoch   3/3]     Time: 197.15s
+    Train: loss =     5.58813 (min =     5.77620)     acc = 0.89755 (max = 0.89026) 
+    Test : loss =     6.33998 (min =     7.12089)     acc = 0.86307 (max = 0.84916) 
+
+Total training time: 594.26s
+
+[Trial 24/100,   Sub-Trial 1/1]:     Time: 594.57s
+  accuracy: 0.863
+[Epoch   1/3]     Time: 196.75s
+    Train: loss =     6.87901                          acc = 0.85243 
+    Test : loss =     6.41197                          acc = 0.86232 
+
+[Epoch   2/3]     Time: 196.48s
+    Train: loss =     5.36772 (min =     6.87901)     acc = 0.89494 (max = 0.85243) 
+    Test : loss =     6.08452 (min =     6.41197)     acc = 0.85932 (max = 0.86232) 
+
+[Epoch   3/3]     Time: 196.91s
+    Train: loss =     5.16920 (min =     5.36772)     acc = 0.90154 (max = 0.89494) 
+    Test : loss =     5.99502 (min =     6.08452)     acc = 0.86482 (max = 0.86232) 
+
+Total training time: 590.22s
+
+[Trial 25/100,   Sub-Trial 1/1]:     Time: 590.42s
+  accuracy: 0.865
+[Epoch   1/3]     Time: 196.95s
+    Train: loss =     6.70502                          acc = 0.83936 
+    Test : loss =     6.54186                          acc = 0.85202 
+
+[Epoch   2/3]     Time: 197.49s
+    Train: loss =     5.41077 (min =     6.70502)     acc = 0.88952 (max = 0.83936) 
+    Test : loss =     6.56710 (min =     6.54186)     acc = 0.86162 (max = 0.85202) 
+
+[Epoch   3/3]     Time: 196.56s
+    Train: loss =     5.19780 (min =     5.41077)     acc = 0.89915 (max = 0.88952) 
+    Test : loss =     7.85670 (min =     6.54186)     acc = 0.85721 (max = 0.86162) 
+
+Total training time: 591.18s
+
+[Trial 26/100,   Sub-Trial 1/1]:     Time: 591.30s
+  accuracy: 0.857
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 198.61s
+    Train: loss =     8.96048                          acc = 0.79756 
+    Test : loss =    10.03258                          acc = 0.83855 
+
+[Epoch   2/3]     Time: 201.75s
+    Train: loss =     7.89824 (min =     8.96048)     acc = 0.87975 (max = 0.79756) 
+    Test : loss =     7.05026 (min =    10.03258)     acc = 0.83276 (max = 0.83855) 
+
+[Epoch   3/3]     Time: 200.08s
+    Train: loss =     7.52037 (min =     7.89824)     acc = 0.88897 (max = 0.87975) 
+    Test : loss =     7.83608 (min =     7.05026)     acc = 0.86078 (max = 0.83855) 
+
+Total training time: 600.64s
+
+[Trial 27/100,   Sub-Trial 1/1]:     Time: 600.84s
+  accuracy: 0.861
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 196.91s
+    Train: loss =     9.52757                          acc = 0.82796 
+    Test : loss =    11.02206                          acc = 0.82280 
+
+[Epoch   2/3]     Time: 200.27s
+    Train: loss =     8.46983 (min =     9.52757)     acc = 0.87100 (max = 0.82796) 
+    Test : loss =     7.47613 (min =    11.02206)     acc = 0.85372 (max = 0.82280) 
+
+[Epoch   3/3]     Time: 199.63s
+    Train: loss =     8.28232 (min =     8.46983)     acc = 0.87777 (max = 0.87100) 
+    Test : loss =     7.35021 (min =     7.47613)     acc = 0.86060 (max = 0.85372) 
+
+Total training time: 596.90s
+
+[Trial 28/100,   Sub-Trial 1/1]:     Time: 597.03s
+  accuracy: 0.861
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 201.29s
+    Train: loss =     8.74339                          acc = 0.84245 
+    Test : loss =    12.69928                          acc = 0.82713 
+
+[Epoch   2/3]     Time: 201.07s
+    Train: loss =     7.59709 (min =     8.74339)     acc = 0.88402 (max = 0.84245) 
+    Test : loss =     9.11508 (min =    12.69928)     acc = 0.83748 (max = 0.82713) 
+
+[Epoch   3/3]     Time: 200.03s
+    Train: loss =     6.94038 (min =     7.59709)     acc = 0.89598 (max = 0.88402) 
+    Test : loss =     8.98237 (min =     9.11508)     acc = 0.85479 (max = 0.83748) 
+
+Total training time: 602.55s
+
+[Trial 30/100,   Sub-Trial 1/1]:     Time: 602.78s
+  accuracy: 0.855
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 200.54s
+    Train: loss =    10.52010                          acc = 0.81136 
+    Test : loss =    11.43203                          acc = 0.80834 
+
+[Epoch   2/3]     Time: 201.52s
+    Train: loss =     8.58982 (min =    10.52010)     acc = 0.86071 (max = 0.81136) 
+    Test : loss =    11.32160 (min =    11.43203)     acc = 0.83750 (max = 0.80834) 
+
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 200.49s
+    Train: loss =     7.31810                          acc = 0.84449 
+    Test : loss =     9.79492                          acc = 0.85763 
+
+[Epoch   2/3]     Time: 200.20s
+    Train: loss =     6.29064 (min =     7.31810)     acc = 0.89072 (max = 0.84449) 
+    Test : loss =     7.56544 (min =     9.79492)     acc = 0.85273 (max = 0.85763) 
+
+[Epoch   3/3]     Time: 200.18s
+    Train: loss =     6.10446 (min =     6.29064)     acc = 0.89889 (max = 0.89072) 
+    Test : loss =     8.18264 (min =     7.56544)     acc = 0.85901 (max = 0.85763) 
+
+Total training time: 600.94s
+
+[Trial 33/100,   Sub-Trial 1/1]:     Time: 601.07s
+  accuracy: 0.859
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 200.32s
+    Train: loss =    10.73501                          acc = 0.80169 
+    Test : loss =    10.19140                          acc = 0.85786 
+
+[Epoch   2/3]     Time: 201.62s
+    Train: loss =     9.73164 (min =    10.73501)     acc = 0.89072 (max = 0.80169) 
+    Test : loss =    10.23326 (min =    10.19140)     acc = 0.86075 (max = 0.85786) 
+
+[Epoch   3/3]     Time: 201.62s
+    Train: loss =     9.62617 (min =     9.73164)     acc = 0.89982 (max = 0.89072) 
+    Test : loss =    10.03751 (min =    10.19140)     acc = 0.86339 (max = 0.86075) 
+
+Total training time: 603.76s
+
+[Trial 34/100,   Sub-Trial 1/1]:     Time: 603.89s
+  accuracy: 0.863
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 196.25s
+    Train: loss =     7.73829                          acc = 0.85279 
+    Test : loss =     7.54833                          acc = 0.84045 
+
+[Epoch   2/3]     Time: 196.97s
+    Train: loss =     6.93121 (min =     7.73829)     acc = 0.88713 (max = 0.85279) 
+    Test : loss =     7.46783 (min =     7.54833)     acc = 0.85843 (max = 0.84045) 
+
+[Epoch   3/3]     Time: 196.69s
+    Train: loss =     6.80553 (min =     6.93121)     acc = 0.89295 (max = 0.88713) 
+    Test : loss =     7.29951 (min =     7.46783)     acc = 0.85325 (max = 0.85843) 
+
+Total training time: 590.09s
+
+[Trial 39/100,   Sub-Trial 1/1]:     Time: 590.22s
+  accuracy: 0.853
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 196.52s
+    Train: loss =     8.86043                          acc = 0.84303 
+    Test : loss =     8.89995                          acc = 0.83018 
+
+[Epoch   2/3]     Time: 197.51s
+    Train: loss =     7.55527 (min =     8.86043)     acc = 0.88365 (max = 0.84303) 
+    Test : loss =     7.33655 (min =     8.89995)     acc = 0.84204 (max = 0.83018) 
+
+[Epoch   3/3]     Time: 196.25s
+    Train: loss =     7.14847 (min =     7.55527)     acc = 0.88977 (max = 0.88365) 
+    Test : loss =     7.27816 (min =     7.33655)     acc = 0.85849 (max = 0.84204) 
+
+Total training time: 590.36s
+
+[Trial 42/100,   Sub-Trial 1/1]:     Time: 590.49s
+  accuracy: 0.858
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 196.67s
+    Train: loss =     7.69694                          acc = 0.85034 
+    Test : loss =     7.76320                          acc = 0.85022 
+
+[Epoch   2/3]     Time: 197.09s
+    Train: loss =     6.46562 (min =     7.69694)     acc = 0.88774 (max = 0.85034) 
+    Test : loss =     8.99238 (min =     7.76320)     acc = 0.84751 (max = 0.85022) 
+
+[Epoch   3/3]     Time: 197.49s
+    Train: loss =     6.24941 (min =     6.46562)     acc = 0.89410 (max = 0.88774) 
+    Test : loss =     7.62876 (min =     7.76320)     acc = 0.85742 (max = 0.85022) 
+
+Total training time: 591.33s
+
+[Trial 43/100,   Sub-Trial 1/1]:     Time: 591.46s
+  accuracy: 0.857
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 196.25s
+    Train: loss =     8.57444                          acc = 0.83999 
+    Test : loss =     7.58543                          acc = 0.85713 
+
+[Epoch   2/3]     Time: 200.05s
+    Train: loss =     7.07986 (min =     8.57444)     acc = 0.88422 (max = 0.83999) 
+    Test : loss =    10.32697 (min =     7.58543)     acc = 0.82421 (max = 0.85713) 
+
+[Epoch   3/3]     Time: 196.27s
+    Train: loss =     7.07956 (min =     7.07986)     acc = 0.89328 (max = 0.88422) 
+    Test : loss =    12.77915 (min =     7.58543)     acc = 0.84282 (max = 0.85713) 
+
+Total training time: 592.69s
+
+[Trial 44/100,   Sub-Trial 1/1]:     Time: 592.84s
+  accuracy: 0.843
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 197.42s
+    Train: loss =    13.44362                          acc = 0.74808 
+    Test : loss =     8.96432                          acc = 0.83127 
+
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 196.23s
+    Train: loss =    11.27966                          acc = 0.82593 
+    Test : loss =    10.90792                          acc = 0.84459 
+
+[Epoch   2/3]     Time: 197.07s
+    Train: loss =    10.81505 (min =    11.27966)     acc = 0.87547 (max = 0.82593) 
+    Test : loss =    11.22041 (min =    10.90792)     acc = 0.84848 (max = 0.84459) 
+
+[Epoch   3/3]     Time: 196.86s
+    Train: loss =    10.79830 (min =    10.81505)     acc = 0.88029 (max = 0.87547) 
+    Test : loss =    10.98682 (min =    10.90792)     acc = 0.85153 (max = 0.84848) 
+
+Total training time: 590.31s
+
+[Trial 46/100,   Sub-Trial 1/1]:     Time: 590.47s
+  accuracy: 0.852
+[Epoch   1/3]     Time: 195.88s
+    Train: loss =     5.86290                          acc = 0.85787 
+    Test : loss =     6.70920                          acc = 0.83651 
+
+[Epoch   2/3]     Time: 196.47s
+    Train: loss =     5.32609 (min =     5.86290)     acc = 0.87569 (max = 0.85787) 
+    Test : loss =     6.60506 (min =     6.70920)     acc = 0.83907 (max = 0.83651) 
+
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 196.47s
+    Train: loss =    13.63129                          acc = 0.73118 
+    Test : loss =     9.01936                          acc = 0.84350 
+
+[Epoch   2/3]     Time: 196.40s
+    Train: loss =    11.41457 (min =    13.63129)     acc = 0.78543 (max = 0.73118) 
+    Test : loss =     8.75311 (min =     9.01936)     acc = 0.85137 (max = 0.84350) 
+
+[Epoch   3/3]     Time: 197.30s
+    Train: loss =    10.80115 (min =    11.41457)     acc = 0.80647 (max = 0.78543) 
+    Test : loss =    14.96954 (min =     8.75311)     acc = 0.61221 (max = 0.85137) 
+
+Total training time: 590.24s
+
+[Trial 49/100,   Sub-Trial 1/1]:     Time: 590.36s
+  accuracy: 0.612
+[Epoch   1/3]     Time: 196.41s
+    Train: loss =     5.88663                          acc = 0.85485 
+    Test : loss =     6.22245                          acc = 0.83417 
+
+[Epoch   2/3]     Time: 196.63s
+    Train: loss =     4.16062 (min =     5.88663)     acc = 0.88957 (max = 0.85485) 
+    Test : loss =     5.86972 (min =     6.22245)     acc = 0.84345 (max = 0.83417) 
+
+[Epoch   3/3]     Time: 196.42s
+    Train: loss =     3.88252 (min =     4.16062)     acc = 0.89621 (max = 0.88957) 
+    Test : loss =     5.19260 (min =     5.86972)     acc = 0.85956 (max = 0.84345) 
+
+Total training time: 589.54s
+
+[Trial 50/100,   Sub-Trial 1/1]:     Time: 589.67s
+  accuracy: 0.860
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 196.64s
+    Train: loss =     8.19758                          acc = 0.82147 
+    Test : loss =     6.19725                          acc = 0.85135 
+
+[Epoch   2/3]     Time: 196.82s
+    Train: loss =     4.60232 (min =     8.19758)     acc = 0.88870 (max = 0.82147) 
+    Test : loss =     5.31434 (min =     6.19725)     acc = 0.85536 (max = 0.85135) 
+
+[Epoch   3/3]     Time: 197.57s
+    Train: loss =     3.95426 (min =     4.60232)     acc = 0.89531 (max = 0.88870) 
+    Test : loss =     5.16065 (min =     5.31434)     acc = 0.86182 (max = 0.85536) 
+
+Total training time: 591.13s
+
+[Trial 53/100,   Sub-Trial 1/1]:     Time: 591.25s
+  accuracy: 0.862
+[Epoch   1/3]     Time: 197.35s
+    Train: loss =     7.36244                          acc = 0.83409 
+    Test : loss =     5.84729                          acc = 0.85617 
+
+[Epoch   2/3]     Time: 198.00s
+    Train: loss =     4.38005 (min =     7.36244)     acc = 0.89153 (max = 0.83409) 
+    Test : loss =     5.69956 (min =     5.84729)     acc = 0.84736 (max = 0.85617) 
+
+[Epoch   3/3]     Time: 197.91s
+    Train: loss =     3.81252 (min =     4.38005)     acc = 0.90084 (max = 0.89153) 
+    Test : loss =     5.19776 (min =     5.69956)     acc = 0.85896 (max = 0.85617) 
+
+Total training time: 593.40s
+
+[Trial 54/100,   Sub-Trial 1/1]:     Time: 593.53s
+  accuracy: 0.859
+[Epoch   1/3]     Time: 198.11s
+    Train: loss =    11.15543                          acc = 0.80189 
+    Test : loss =    11.22482                          acc = 0.85022 
+
+[Epoch   2/3]     Time: 197.58s
+    Train: loss =    10.67227 (min =    11.15543)     acc = 0.88453 (max = 0.80189) 
+    Test : loss =    10.72799 (min =    11.22482)     acc = 0.85648 (max = 0.85022) 
+
+[Epoch   3/3]     Time: 196.94s
+    Train: loss =    10.63646 (min =    10.67227)     acc = 0.89256 (max = 0.88453) 
+    Test : loss =    11.17387 (min =    10.72799)     acc = 0.84835 (max = 0.85648) 
+
+Total training time: 592.71s
+
+[Trial 56/100,   Sub-Trial 1/1]:     Time: 592.87s
+  accuracy: 0.848
+[Epoch   1/3]     Time: 195.79s
+    Train: loss =     8.78535                          acc = 0.83688 
+    Test : loss =     9.73789                          acc = 0.83143 
+
+[Epoch   2/3]     Time: 196.76s
+    Train: loss =     7.84430 (min =     8.78535)     acc = 0.87829 (max = 0.83688) 
+    Test : loss =     8.17501 (min =     9.73789)     acc = 0.84814 (max = 0.83143) 
+
+[Epoch   3/3]     Time: 195.55s
+    Train: loss =     7.60196 (min =     7.84430)     acc = 0.88879 (max = 0.87829) 
+    Test : loss =     7.21286 (min =     8.17501)     acc = 0.86253 (max = 0.84814) 
+
+Total training time: 588.18s
+
+[Trial 57/100,   Sub-Trial 1/1]:     Time: 588.34s
+  accuracy: 0.863
+[Epoch   1/3]     Time: 195.88s
+    Train: loss =     9.41560                          acc = 0.81305 
+    Test : loss =    11.65911                          acc = 0.83474 
+
+[Epoch   2/3]     Time: 197.04s
+    Train: loss =     8.66120 (min =     9.41560)     acc = 0.87985 (max = 0.81305) 
+    Test : loss =     8.32491 (min =    11.65911)     acc = 0.86201 (max = 0.83474) 
+
+[Epoch   3/3]     Time: 196.69s
+    Train: loss =     8.15854 (min =     8.66120)     acc = 0.89967 (max = 0.87985) 
+    Test : loss =    10.16865 (min =     8.32491)     acc = 0.86292 (max = 0.86201) 
+
+Total training time: 589.70s
+
+[Trial 58/100,   Sub-Trial 1/1]:     Time: 589.86s
+  accuracy: 0.863
+[Epoch   1/3]     Time: 194.83s
+    Train: loss =     9.51568                          acc = 0.83379 
+    Test : loss =     9.68550                          acc = 0.83216 
+
+[Epoch   2/3]     Time: 195.74s
+    Train: loss =     8.74178 (min =     9.51568)     acc = 0.88075 (max = 0.83379) 
+    Test : loss =     8.50499 (min =     9.68550)     acc = 0.85690 (max = 0.83216) 
+
+[Epoch   3/3]     Time: 195.55s
+    Train: loss =     8.21551 (min =     8.74178)     acc = 0.89093 (max = 0.88075) 
+    Test : loss =     8.01999 (min =     8.50499)     acc = 0.86068 (max = 0.85690) 
+
+Total training time: 586.21s
+
+[Trial 61/100,   Sub-Trial 1/1]:     Time: 586.37s
+  accuracy: 0.861
+[Epoch   1/3]     Time: 196.50s
+    Train: loss =     8.90462                          acc = 0.83893 
+    Test : loss =     7.54483                          acc = 0.85411 
+
+[Epoch   2/3]     Time: 196.35s
+    Train: loss =     7.96945 (min =     8.90462)     acc = 0.87928 (max = 0.83893) 
+    Test : loss =    10.46644 (min =     7.54483)     acc = 0.84553 (max = 0.85411) 
+
+[Epoch   3/3]     Time: 197.05s
+    Train: loss =     7.64759 (min =     7.96945)     acc = 0.89266 (max = 0.87928) 
+    Test : loss =    12.18701 (min =     7.54483)     acc = 0.83610 (max = 0.85411) 
+
+Total training time: 590.01s
+
+[Trial 63/100,   Sub-Trial 1/1]:     Time: 590.19s
+  accuracy: 0.836
+[Epoch   1/3]     Time: 195.20s
+    Train: loss =    10.98325                          acc = 0.82639 
+    Test : loss =    10.64684                          acc = 0.86021 
+
+[Epoch   2/3]     Time: 196.56s
+    Train: loss =    10.45199 (min =    10.98325)     acc = 0.89613 (max = 0.82639) 
+    Test : loss =    10.63534 (min =    10.64684)     acc = 0.86800 (max = 0.86021) 
+
+[Epoch   3/3]     Time: 196.45s
+    Train: loss =    10.39238 (min =    10.45199)     acc = 0.90266 (max = 0.89613) 
+    Test : loss =    10.67538 (min =    10.63534)     acc = 0.86897 (max = 0.86800) 
+
+Total training time: 588.30s
+
+[Trial 64/100,   Sub-Trial 1/1]:     Time: 588.47s
+  accuracy: 0.869
+[Epoch   1/3]     Time: 196.04s
+    Train: loss =    11.25097                          acc = 0.83275 
+    Test : loss =    11.18781                          acc = 0.84895 
+
+[Epoch   2/3]     Time: 196.57s
+    Train: loss =    10.52876 (min =    11.25097)     acc = 0.89453 (max = 0.83275) 
+    Test : loss =    11.07270 (min =    11.18781)     acc = 0.86401 (max = 0.84895) 
+
+[Epoch   3/3]     Time: 195.89s
+    Train: loss =    10.44113 (min =    10.52876)     acc = 0.90207 (max = 0.89453) 
+    Test : loss =    10.65804 (min =    11.07270)     acc = 0.86407 (max = 0.86401) 
+
+Total training time: 588.58s
+
+[Trial 65/100,   Sub-Trial 1/1]:     Time: 588.78s
+  accuracy: 0.864
+[Epoch   1/3]     Time: 195.23s
+    Train: loss =    11.02425                          acc = 0.75817 
+    Test : loss =    10.33262                          acc = 0.86083 
+
+[Epoch   2/3]     Time: 196.14s
+    Train: loss =    10.13340 (min =    11.02425)     acc = 0.84067 (max = 0.75817) 
+    Test : loss =    10.48722 (min =    10.33262)     acc = 0.86717 (max = 0.86083) 
+
+[Epoch   3/3]     Time: 196.10s
+    Train: loss =    10.05197 (min =    10.13340)     acc = 0.90290 (max = 0.84067) 
+    Test : loss =    10.79138 (min =    10.33262)     acc = 0.87045 (max = 0.86717) 
+
+Total training time: 587.56s
+
+[Trial 66/100,   Sub-Trial 1/1]:     Time: 587.74s
+  accuracy: 0.870
+[Epoch   1/3]     Time: 196.27s
+    Train: loss =    11.21822                          acc = 0.83398 
+    Test : loss =    11.06783                          acc = 0.85056 
+
+[Epoch   2/3]     Time: 196.11s
+    Train: loss =    10.27205 (min =    11.21822)     acc = 0.89131 (max = 0.83398) 
+    Test : loss =    10.82260 (min =    11.06783)     acc = 0.86550 (max = 0.85056) 
+
+[Epoch   3/3]     Time: 196.91s
+    Train: loss =    10.26176 (min =    10.27205)     acc = 0.89512 (max = 0.89131) 
+    Test : loss =    10.57474 (min =    10.82260)     acc = 0.84994 (max = 0.86550) 
+
+Total training time: 589.50s
+
+[Trial 68/100,   Sub-Trial 1/1]:     Time: 589.74s
+  accuracy: 0.850
+[Epoch   1/3]     Time: 194.80s
+    Train: loss =     7.84306                          acc = 0.83546 
+    Test : loss =     7.15796                          acc = 0.86154 
+
+[Epoch   2/3]     Time: 195.66s
+    Train: loss =     6.43660 (min =     7.84306)     acc = 0.89356 (max = 0.83546) 
+    Test : loss =     7.11355 (min =     7.15796)     acc = 0.86532 (max = 0.86154) 
+
+[Epoch   3/3]     Time: 196.21s
+    Train: loss =     6.27918 (min =     6.43660)     acc = 0.90032 (max = 0.89356) 
+    Test : loss =     7.01440 (min =     7.11355)     acc = 0.86884 (max = 0.86532) 
+
+Total training time: 586.76s
+
+[Trial 71/100,   Sub-Trial 1/1]:     Time: 586.92s
+  accuracy: 0.869
+[Epoch   1/3]     Time: 195.15s
+    Train: loss =    10.52786                          acc = 0.80996 
+    Test : loss =    10.09286                          acc = 0.86094 
+
+[Epoch   2/3]     Time: 196.39s
+    Train: loss =     9.67072 (min =    10.52786)     acc = 0.89083 (max = 0.80996) 
+    Test : loss =    10.28719 (min =    10.09286)     acc = 0.85505 (max = 0.86094) 
+
+[Epoch   3/3]     Time: 196.17s
+    Train: loss =     9.58697 (min =     9.67072)     acc = 0.89457 (max = 0.89083) 
+    Test : loss =     9.99014 (min =    10.09286)     acc = 0.86683 (max = 0.86094) 
+
+Total training time: 587.83s
+
+[Trial 72/100,   Sub-Trial 1/1]:     Time: 587.98s
+  accuracy: 0.867
+[Epoch   1/3]     Time: 194.42s
+    Train: loss =    10.08300                          acc = 0.84654 
+    Test : loss =    10.07368                          acc = 0.85744 
+
+[Epoch   2/3]     Time: 196.00s
+    Train: loss =     9.63445 (min =    10.08300)     acc = 0.88801 (max = 0.84654) 
+    Test : loss =    10.06780 (min =    10.07368)     acc = 0.86433 (max = 0.85744) 
+
+[Epoch   3/3]     Time: 194.76s
+    Train: loss =     9.53303 (min =     9.63445)     acc = 0.89128 (max = 0.88801) 
+    Test : loss =    10.02040 (min =    10.06780)     acc = 0.85752 (max = 0.86433) 
+
+Total training time: 585.25s
+
+[Trial 75/100,   Sub-Trial 1/1]:     Time: 585.44s
+  accuracy: 0.858
+[Epoch   1/3]     Time: 194.69s
+    Train: loss =    10.99530                          acc = 0.71837 
+    Test : loss =    10.10368                          acc = 0.85901 
+
+[Epoch   2/3]     Time: 193.33s
+    Train: loss =     9.64439 (min =    10.99530)     acc = 0.88533 (max = 0.71837) 
+    Test : loss =     9.94877 (min =    10.10368)     acc = 0.85056 (max = 0.85901) 
+
+[Epoch   3/3]     Time: 194.49s
+    Train: loss =     9.55219 (min =     9.64439)     acc = 0.88406 (max = 0.88533) 
+    Test : loss =     9.98318 (min =     9.94877)     acc = 0.85992 (max = 0.85901) 
+
+Total training time: 582.60s
+
+[Trial 78/100,   Sub-Trial 1/1]:     Time: 582.75s
+  accuracy: 0.860
+[Epoch   1/3]     Time: 197.13s
+    Train: loss =     7.32016                          acc = 0.85760 
+    Test : loss =     7.13283                          acc = 0.85851 
+
+[Epoch   2/3]     Time: 196.10s
+    Train: loss =     6.38678 (min =     7.32016)     acc = 0.89713 (max = 0.85760) 
+    Test : loss =     6.96708 (min =     7.13283)     acc = 0.86719 (max = 0.85851) 
+
+[Epoch   3/3]     Time: 197.97s
+    Train: loss =     6.24137 (min =     6.38678)     acc = 0.90349 (max = 0.89713) 
+    Test : loss =     6.94544 (min =     6.96708)     acc = 0.86928 (max = 0.86719) 
+
+Total training time: 591.55s
+
+[Trial 79/100,   Sub-Trial 1/1]:     Time: 591.88s
+  accuracy: 0.869
+[Epoch   1/3]     Time: 195.15s
+    Train: loss =     7.40826                          acc = 0.85719 
+    Test : loss =     7.09564                          acc = 0.86164 
+
+[Epoch   2/3]     Time: 194.93s
+    Train: loss =     6.49751 (min =     7.40826)     acc = 0.89664 (max = 0.85719) 
+    Test : loss =     7.02582 (min =     7.09564)     acc = 0.86811 (max = 0.86164) 
+
+[Epoch   3/3]     Time: 195.12s
+    Train: loss =     6.30650 (min =     6.49751)     acc = 0.90166 (max = 0.89664) 
+    Test : loss =     6.96702 (min =     7.02582)     acc = 0.87139 (max = 0.86811) 
+
+Total training time: 585.29s
+
+[Trial 81/100,   Sub-Trial 1/1]:     Time: 585.45s
+  accuracy: 0.871
+[Epoch   1/3]     Time: 194.13s
+    Train: loss =     7.20144                          acc = 0.86018 
+    Test : loss =     7.19696                          acc = 0.85976 
+
+[Epoch   2/3]     Time: 195.84s
+    Train: loss =     6.39737 (min =     7.20144)     acc = 0.89708 (max = 0.86018) 
+    Test : loss =     6.99426 (min =     7.19696)     acc = 0.86923 (max = 0.85976) 
+
+[Epoch   3/3]     Time: 195.36s
+    Train: loss =     6.27886 (min =     6.39737)     acc = 0.90509 (max = 0.89708) 
+    Test : loss =     7.06186 (min =     6.99426)     acc = 0.86860 (max = 0.86923) 
+
+Total training time: 585.48s
+
+[Trial 82/100,   Sub-Trial 1/1]:     Time: 585.64s
+  accuracy: 0.869
+[Epoch   1/3]     Time: 193.59s
+    Train: loss =     7.08986                          acc = 0.86940 
+    Test : loss =     7.10608                          acc = 0.86182 
+
+[Epoch   2/3]     Time: 194.36s
+    Train: loss =     6.44248 (min =     7.08986)     acc = 0.89547 (max = 0.86940) 
+    Test : loss =     6.97902 (min =     7.10608)     acc = 0.86566 (max = 0.86182) 
+
+[Epoch   3/3]     Time: 195.22s
+    Train: loss =     6.30359 (min =     6.44248)     acc = 0.89988 (max = 0.89547) 
+    Test : loss =     6.95293 (min =     6.97902)     acc = 0.86923 (max = 0.86566) 
+
+Total training time: 583.25s
+
+[Trial 83/100,   Sub-Trial 1/1]:     Time: 583.40s
+  accuracy: 0.869
+[Epoch   1/3]     Time: 194.99s
+    Train: loss =     7.15689                          acc = 0.86261 
+    Test : loss =     7.14914                          acc = 0.85901 
+
+[Epoch   2/3]     Time: 195.65s
+    Train: loss =     6.40801 (min =     7.15689)     acc = 0.89759 (max = 0.86261) 
+    Test : loss =     6.97552 (min =     7.14914)     acc = 0.86910 (max = 0.85901) 
+
+[Epoch   3/3]     Time: 195.14s
+    Train: loss =     6.23249 (min =     6.40801)     acc = 0.90505 (max = 0.89759) 
+    Test : loss =     7.05123 (min =     6.97552)     acc = 0.86044 (max = 0.86910) 
+
+Total training time: 585.86s
+
+[Trial 84/100,   Sub-Trial 1/1]:     Time: 586.04s
+  accuracy: 0.860
+[Epoch   1/3]     Time: 194.59s
+    Train: loss =     8.35779                          acc = 0.82219 
+    Test : loss =     7.34565                          acc = 0.85127 
+
+[Epoch   2/3]     Time: 194.44s
+    Train: loss =     6.35426 (min =     8.35779)     acc = 0.89840 (max = 0.82219) 
+    Test : loss =     7.08154 (min =     7.34565)     acc = 0.86328 (max = 0.85127) 
+
+[Epoch   3/3]     Time: 195.24s
+    Train: loss =     6.18509 (min =     6.35426)     acc = 0.90488 (max = 0.89840) 
+    Test : loss =     7.06770 (min =     7.08154)     acc = 0.86678 (max = 0.86328) 
+
+Total training time: 584.36s
+
+[Trial 85/100,   Sub-Trial 1/1]:     Time: 584.51s
+  accuracy: 0.867
+[Epoch   1/3]     Time: 194.88s
+    Train: loss =     9.18348                          acc = 0.81966 
+    Test : loss =     7.32808                          acc = 0.85890 
+
+[Epoch   2/3]     Time: 196.58s
+    Train: loss =     6.51236 (min =     9.18348)     acc = 0.89582 (max = 0.81966) 
+    Test : loss =     7.14976 (min =     7.32808)     acc = 0.86542 (max = 0.85890) 
+
+[Epoch   3/3]     Time: 196.56s
+    Train: loss =     6.37352 (min =     6.51236)     acc = 0.90200 (max = 0.89582) 
+    Test : loss =     7.00874 (min =     7.14976)     acc = 0.87022 (max = 0.86542) 
+
+Total training time: 588.57s
+
+[Trial 86/100,   Sub-Trial 1/1]:     Time: 588.79s
+  accuracy: 0.870
+[Epoch   1/3]     Time: 194.80s
+    Train: loss =    10.19553                          acc = 0.83251 
+    Test : loss =     9.94749                          acc = 0.86305 
+
+[Epoch   2/3]     Time: 198.53s
+    Train: loss =     9.62156 (min =    10.19553)     acc = 0.88957 (max = 0.83251) 
+    Test : loss =     9.99683 (min =     9.94749)     acc = 0.86443 (max = 0.86305) 
+
+[Epoch   3/3]     Time: 195.51s
+    Train: loss =     9.52630 (min =     9.62156)     acc = 0.89680 (max = 0.88957) 
+    Test : loss =     9.96376 (min =     9.94749)     acc = 0.86526 (max = 0.86443) 
+
+Total training time: 588.98s
+
+[Trial 87/100,   Sub-Trial 1/1]:     Time: 589.16s
+  accuracy: 0.865
+[Epoch   1/3]     Time: 195.14s
+    Train: loss =    10.97549                          acc = 0.77988 
+    Test : loss =    10.16359                          acc = 0.85950 
+
+[Epoch   2/3]     Time: 195.41s
+    Train: loss =     9.73338 (min =    10.97549)     acc = 0.88789 (max = 0.77988) 
+    Test : loss =    10.07470 (min =    10.16359)     acc = 0.86639 (max = 0.85950) 
+
+[Epoch   3/3]     Time: 194.62s
+    Train: loss =     9.62638 (min =     9.73338)     acc = 0.89586 (max = 0.88789) 
+    Test : loss =    10.02632 (min =    10.07470)     acc = 0.86234 (max = 0.86639) 
+
+Total training time: 585.25s
+
+[Trial 88/100,   Sub-Trial 1/1]:     Time: 585.39s
+  accuracy: 0.862
+[Epoch   1/3]     Time: 194.82s
+    Train: loss =     7.18059                          acc = 0.86628 
+    Test : loss =     7.24764                          acc = 0.85867 
+
+[Epoch   2/3]     Time: 196.08s
+    Train: loss =     6.39514 (min =     7.18059)     acc = 0.89753 (max = 0.86628) 
+    Test : loss =     6.99115 (min =     7.24764)     acc = 0.86740 (max = 0.85867) 
+
+[Epoch   3/3]     Time: 195.03s
+    Train: loss =     6.24348 (min =     6.39514)     acc = 0.90517 (max = 0.89753) 
+    Test : loss =     6.99166 (min =     6.99115)     acc = 0.86769 (max = 0.86740) 
+
+Total training time: 586.00s
+
+[Trial 89/100,   Sub-Trial 1/1]:     Time: 586.15s
+  accuracy: 0.868
+[Epoch   1/3]     Time: 194.70s
+    Train: loss =     9.39691                          acc = 0.78940 
+    Test : loss =     7.47655                          acc = 0.85773 
+
+[Epoch   2/3]     Time: 194.68s
+    Train: loss =     6.58210 (min =     9.39691)     acc = 0.89494 (max = 0.78940) 
+    Test : loss =     7.13600 (min =     7.47655)     acc = 0.86811 (max = 0.85773) 
+
+[Epoch   3/3]     Time: 193.96s
+    Train: loss =     6.30852 (min =     6.58210)     acc = 0.90274 (max = 0.89494) 
+    Test : loss =     7.00305 (min =     7.13600)     acc = 0.86886 (max = 0.86811) 
+
+Total training time: 583.48s
+
+[Trial 90/100,   Sub-Trial 1/1]:     Time: 583.62s
+  accuracy: 0.869
+[Epoch   1/3]     Time: 194.90s
+    Train: loss =     9.20460                          acc = 0.78145 
+    Test : loss =     7.41616                          acc = 0.85880 
+
+[Epoch   2/3]     Time: 195.31s
+    Train: loss =     6.55784 (min =     9.20460)     acc = 0.89538 (max = 0.78145) 
+    Test : loss =     7.02311 (min =     7.41616)     acc = 0.86795 (max = 0.85880) 
+
+[Epoch   3/3]     Time: 195.53s
+    Train: loss =     6.30155 (min =     6.55784)     acc = 0.90329 (max = 0.89538) 
+    Test : loss =     6.95734 (min =     7.02311)     acc = 0.87123 (max = 0.86795) 
+
+Total training time: 585.83s
+
+[Trial 92/100,   Sub-Trial 1/1]:     Time: 586.00s
+  accuracy: 0.871
+[Epoch   1/3]     Time: 194.77s
+    Train: loss =     9.68372                          acc = 0.76644 
+    Test : loss =     7.81102                          acc = 0.85320 
+
+[Epoch   2/3]     Time: 195.15s
+    Train: loss =     6.51937 (min =     9.68372)     acc = 0.89524 (max = 0.76644) 
+    Test : loss =     7.02877 (min =     7.81102)     acc = 0.86855 (max = 0.85320) 
+
+[Epoch   3/3]     Time: 196.00s
+    Train: loss =     6.30987 (min =     6.51937)     acc = 0.90269 (max = 0.89524) 
+    Test : loss =     7.06701 (min =     7.02877)     acc = 0.86698 (max = 0.86855) 
+
+Total training time: 586.04s
+
+[Trial 93/100,   Sub-Trial 1/1]:     Time: 586.19s
+  accuracy: 0.867
+[Epoch   1/3]     Time: 195.26s
+    Train: loss =     5.96514                          acc = 0.85870 
+    Test : loss =     5.55356                          acc = 0.86466 
+
+[Epoch   2/3]     Time: 198.35s
+    Train: loss =     4.51578 (min =     5.96514)     acc = 0.89902 (max = 0.85870) 
+    Test : loss =     5.44466 (min =     5.55356)     acc = 0.86706 (max = 0.86466) 
+
+[Epoch   3/3]     Time: 197.11s
+    Train: loss =     4.31958 (min =     4.51578)     acc = 0.90607 (max = 0.89902) 
+    Test : loss =     5.30211 (min =     5.44466)     acc = 0.87121 (max = 0.86706) 
+
+Total training time: 590.82s
+
+[Trial 94/100,   Sub-Trial 1/1]:     Time: 591.01s
+  accuracy: 0.871
+[Epoch   1/3]     Time: 195.36s
+    Train: loss =     7.43041                          acc = 0.82655 
+    Test : loss =     5.48227                          acc = 0.86172 
+
+[Epoch   2/3]     Time: 195.66s
+    Train: loss =     4.31888 (min =     7.43041)     acc = 0.89595 (max = 0.82655) 
+    Test : loss =     5.02604 (min =     5.48227)     acc = 0.86891 (max = 0.86172) 
+
+[Epoch   3/3]     Time: 195.44s
+    Train: loss =     3.83612 (min =     4.31888)     acc = 0.90371 (max = 0.89595) 
+    Test : loss =     4.82732 (min =     5.02604)     acc = 0.87014 (max = 0.86891) 
+
+Total training time: 586.54s
+
+[Trial 95/100,   Sub-Trial 1/1]:     Time: 586.70s
+  accuracy: 0.870
+[Epoch   1/3]     Time: 196.12s
+    Train: loss =     5.15189                          acc = 0.87045 
+    Test : loss =     5.31702                          acc = 0.85935 
+
+[Epoch   2/3]     Time: 196.32s
+    Train: loss =     3.90233 (min =     5.15189)     acc = 0.89901 (max = 0.87045) 
+    Test : loss =     4.95217 (min =     5.31702)     acc = 0.86795 (max = 0.85935) 
+
+[Epoch   3/3]     Time: 197.32s
+    Train: loss =     3.68027 (min =     3.90233)     acc = 0.90655 (max = 0.89901) 
+    Test : loss =     5.00567 (min =     4.95217)     acc = 0.86907 (max = 0.86795) 
+
+Total training time: 589.83s
+
+[Trial 96/100,   Sub-Trial 1/1]:     Time: 589.98s
+  accuracy: 0.869
+[Epoch   1/3]     Time: 195.47s
+    Train: loss =     5.04136                          acc = 0.87230 
+    Test : loss =     4.94089                          acc = 0.86719 
+
+[Epoch   2/3]     Time: 195.87s
+    Train: loss =     3.87629 (min =     5.04136)     acc = 0.89994 (max = 0.87230) 
+    Test : loss =     4.81255 (min =     4.94089)     acc = 0.86951 (max = 0.86719) 
+
+[Epoch   3/3]     Time: 195.97s
+    Train: loss =     3.63806 (min =     3.87629)     acc = 0.90653 (max = 0.89994) 
+    Test : loss =     4.77165 (min =     4.81255)     acc = 0.87246 (max = 0.86951) 
+
+Total training time: 587.40s
+
+[Trial 97/100,   Sub-Trial 1/1]:     Time: 587.55s
+  accuracy: 0.872
+[Epoch   1/3]     Time: 195.82s
+    Train: loss =     5.18464                          acc = 0.86923 
+    Test : loss =     5.30000                          acc = 0.85664 
+
+[Epoch   2/3]     Time: 196.20s
+    Train: loss =     3.85131 (min =     5.18464)     acc = 0.90026 (max = 0.86923) 
+    Test : loss =     4.75285 (min =     5.30000)     acc = 0.87175 (max = 0.85664) 
+
+[Epoch   3/3]     Time: 196.09s
+    Train: loss =     3.58952 (min =     3.85131)     acc = 0.90781 (max = 0.90026) 
+    Test : loss =     4.61353 (min =     4.75285)     acc = 0.87626 (max = 0.87175) 
+
+Total training time: 588.20s
+
+[Trial 98/100,   Sub-Trial 1/1]:     Time: 588.39s
+  accuracy: 0.876
+[Epoch   1/3]     Time: 196.16s
+    Train: loss =     5.22817                          acc = 0.86516 
+    Test : loss =     5.44017                          acc = 0.85390 
+
+[Epoch   2/3]     Time: 196.62s
+    Train: loss =     3.83610 (min =     5.22817)     acc = 0.89963 (max = 0.86516) 
+    Test : loss =     4.87268 (min =     5.44017)     acc = 0.86764 (max = 0.85390) 
+
+[Epoch   3/3]     Time: 197.60s
+    Train: loss =     3.60593 (min =     3.83610)     acc = 0.90642 (max = 0.89963) 
+    Test : loss =     4.68143 (min =     4.87268)     acc = 0.87288 (max = 0.86764) 
+
+Total training time: 590.47s
+
+[Trial 99/100,   Sub-Trial 1/1]:     Time: 590.62s
+  accuracy: 0.873
+[Epoch   1/3]     Time: 194.81s
+    Train: loss =     6.21273                          acc = 0.85924 
+    Test : loss =     6.21869                          acc = 0.85567 
+
+[Epoch   2/3]     Time: 195.69s
+    Train: loss =     4.89744 (min =     6.21273)     acc = 0.89699 (max = 0.85924) 
+    Test : loss =     5.67111 (min =     6.21869)     acc = 0.86685 (max = 0.85567) 
+
+[Epoch   3/3]     Time: 196.22s
+    Train: loss =     4.69458 (min =     4.89744)     acc = 0.90157 (max = 0.89699) 
+    Test : loss =     5.64347 (min =     5.67111)     acc = 0.86448 (max = 0.86685) 
+
+Total training time: 587.03s
+
+[Trial 100/100,   Sub-Trial 1/1]:     Time: 587.30s
+  accuracy: 0.864
+
+Hyperparameter tuning complete in 49627.75s

@@ -1,0 +1,777 @@
+WARNING: Prophesee Dataset Toolbox could not be found!
+         Only Prophesee DVS demo will not run properly.
+         Please install it from https://github.com/prophesee-ai/prophesee-automotive-dataset-toolbox
+torch.Size([163074, 1, 39, 31])
+torch.Size([38364, 1, 39, 31])
+torch.Size([1, 1, 39, 31]) tensor(0)
+Train size: 163074
+Test size: 38364
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+Compiling RISP CUDA kernels... If this takes a long time, delete the cached module (~/.cache/torch_extensions/risp_dynamics_debug)!
+[1/2] /usr/local/cuda/bin/nvcc --generate-dependencies-with-compile --dependency-output risp.cuda.o.d -DTORCH_EXTENSION_NAME=risp_dynamics_debug_v3 -DTORCH_API_INCLUDE_EXTENSION_H -isystem /lustre/isaac24/proj/UTK0319/jhanna8/.conda/envs/tennlab_slayer/lib/python3.10/site-packages/torch/include -isystem /lustre/isaac24/proj/UTK0319/jhanna8/.conda/envs/tennlab_slayer/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include -isystem /lustre/isaac24/proj/UTK0319/jhanna8/.conda/envs/tennlab_slayer/include/python3.10 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr -gencode=arch=compute_70,code=sm_70 --compiler-options '-fPIC' -std=c++17 -c /lustre/isaac24/scratch/jhanna8/repos/tennlab-slayer/src/tennlab_slayer/slayer_rewrites/neuron/dynamics/risp.cu -o risp.cuda.o 
+/lustre/isaac24/scratch/jhanna8/repos/tennlab-slayer/src/tennlab_slayer/slayer_rewrites/neuron/dynamics/risp.cu(196): warning #177-D: variable "dy_t_dV_post" was declared but never referenced
+          const float dy_t_dV_post = 1.0f / w;
+                      ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/lustre/isaac24/scratch/jhanna8/repos/tennlab-slayer/src/tennlab_slayer/slayer_rewrites/neuron/dynamics/risp.cu(170): warning #177-D: variable "has_decay" was declared but never referenced
+      const bool has_decay = (v_decay > 0.0f);
+                 ^
+
+[2/2] c++ risp.cuda.o -shared -L/lustre/isaac24/proj/UTK0319/jhanna8/.conda/envs/tennlab_slayer/lib/python3.10/site-packages/torch/lib -lc10 -lc10_cuda -ltorch_cpu -ltorch_cuda -ltorch -ltorch_python -L/usr/local/cuda/lib64 -lcudart -o risp_dynamics_debug_v3.so
+RISP CUDA kernels compiled successfully.
+<module 'risp_dynamics_debug_v3' from '/nfs/home/jhanna8/.cache/torch_extensions/py310_cu128/risp_dynamics_debug_v3/risp_dynamics_debug_v3.so'>
+<built-in method risp_dynamics of pybind11_builtins.pybind11_detail_function_record_v1_system_libstdcpp_gxx_abi_1xxx_use_cxx11_abi_1 object at 0x7f4de4a5f8d0>
+[Epoch   1/3]     Time: 582.91s
+    Train: loss =    12.06885                          acc = 0.50000 
+    Test : loss =    10.92967                          acc = 0.50000 
+
+[Epoch   2/3]     Time: 270.10s
+    Train: loss =    10.48225 (min =    12.06885)     acc = 0.57907 (max = 0.50000) 
+    Test : loss =     9.81181 (min =    10.92967)     acc = 0.84668 (max = 0.50000) 
+
+[Epoch   3/3]     Time: 261.83s
+    Train: loss =     9.29097 (min =    10.48225)     acc = 0.88045 (max = 0.57907) 
+    Test : loss =     9.64353 (min =     9.81181)     acc = 0.85202 (max = 0.84668) 
+
+Total training time: 1115.19s
+
+[Trial 1/100,   Sub-Trial 1/1]:     Time: 1117.04s
+  accuracy: 0.852
+[Epoch   1/3]     Time: 268.52s
+    Train: loss =    32.49751                          acc = 0.50000 
+    Test : loss =    32.49146                          acc = 0.50000 
+
+[Epoch   2/3]     Time: 254.41s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+[Epoch   3/3]     Time: 241.44s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+Total training time: 764.43s
+
+[Trial 2/100,   Sub-Trial 1/1]:     Time: 764.56s
+  accuracy: 0.500
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 281.06s
+    Train: loss =    32.49751                          acc = 0.50000 
+    Test : loss =    32.49146                          acc = 0.50000 
+
+[Epoch   2/3]     Time: 281.15s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+[Epoch   3/3]     Time: 261.82s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+Total training time: 824.09s
+
+[Trial 3/100,   Sub-Trial 1/1]:     Time: 824.22s
+  accuracy: 0.500
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 282.20s
+    Train: loss =     5.83517                          acc = 0.85099 
+    Test : loss =     6.13361                          acc = 0.83797 
+
+[Epoch   2/3]     Time: 245.91s
+    Train: loss =     4.33552 (min =     5.83517)     acc = 0.88610 (max = 0.85099) 
+    Test : loss =     5.32224 (min =     6.13361)     acc = 0.85742 (max = 0.83797) 
+
+[Epoch   3/3]     Time: 248.76s
+    Train: loss =     4.09359 (min =     4.33552)     acc = 0.89278 (max = 0.88610) 
+    Test : loss =     5.12944 (min =     5.32224)     acc = 0.86065 (max = 0.85742) 
+
+Total training time: 777.00s
+
+[Trial 4/100,   Sub-Trial 1/1]:     Time: 777.18s
+  accuracy: 0.861
+[Epoch   1/3]     Time: 247.89s
+    Train: loss =    24.98892                          acc = 0.50000 
+    Test : loss =    24.91582                          acc = 0.50000 
+
+[Epoch   2/3]     Time: 248.68s
+    Train: loss =    24.92982 (min =    24.98892)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    24.91582 (min =    24.91582)     acc = 0.50000 (max = 0.50000) 
+
+[Epoch   3/3]     Time: 263.63s
+    Train: loss =    24.92978 (min =    24.92982)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    24.91582 (min =    24.91582)     acc = 0.50000 (max = 0.50000) 
+
+Total training time: 760.96s
+
+[Trial 5/100,   Sub-Trial 1/1]:     Time: 761.24s
+  accuracy: 0.500
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 290.66s
+    Train: loss =    32.49751                          acc = 0.50000 
+    Test : loss =    32.49146                          acc = 0.50000 
+
+[Epoch   2/3]     Time: 297.54s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+[Epoch   3/3]     Time: 252.89s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+Total training time: 841.18s
+
+[Trial 6/100,   Sub-Trial 1/1]:     Time: 841.90s
+  accuracy: 0.500
+[Epoch   1/3]     Time: 258.05s
+    Train: loss =    32.49751                          acc = 0.50000 
+    Test : loss =    32.49146                          acc = 0.50000 
+
+[Epoch   2/3]     Time: 250.50s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+[Epoch   3/3]     Time: 258.18s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+Total training time: 766.79s
+
+[Trial 7/100,   Sub-Trial 1/1]:     Time: 766.96s
+  accuracy: 0.500
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 261.71s
+    Train: loss =    32.49751                          acc = 0.50000 
+    Test : loss =    32.49146                          acc = 0.50000 
+
+[Epoch   2/3]     Time: 257.28s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+[Epoch   3/3]     Time: 309.57s
+    Train: loss =    32.49751 (min =    32.49751)     acc = 0.50000 (max = 0.50000) 
+    Test : loss =    32.49146 (min =    32.49146)     acc = 0.50000 (max = 0.50000) 
+
+Total training time: 828.62s
+
+[Trial 8/100,   Sub-Trial 1/1]:     Time: 828.77s
+  accuracy: 0.500
+[Epoch   1/3]     Time: 294.78s
+    Train: loss =    25.27536                          acc = 0.50204 
+    Test : loss =    24.87008                          acc = 0.50005 
+
+[Epoch   2/3]     Time: 295.48s
+    Train: loss =    24.76457 (min =    25.27536)     acc = 0.50002 (max = 0.50204) 
+    Test : loss =    24.75621 (min =    24.87008)     acc = 0.50005 (max = 0.50005) 
+
+[Epoch   3/3]     Time: 303.47s
+    Train: loss =    24.72897 (min =    24.76457)     acc = 0.50004 (max = 0.50204) 
+    Test : loss =    24.76257 (min =    24.75621)     acc = 0.50005 (max = 0.50005) 
+
+Total training time: 893.77s
+
+[Trial 9/100,   Sub-Trial 1/1]:     Time: 893.90s
+  accuracy: 0.500
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 304.62s
+    Train: loss =     6.62132                          acc = 0.84544 
+    Test : loss =     6.29059                          acc = 0.84754 
+
+[Epoch   2/3]     Time: 309.62s
+    Train: loss =     5.46077 (min =     6.62132)     acc = 0.88161 (max = 0.84544) 
+    Test : loss =     6.32106 (min =     6.29059)     acc = 0.84647 (max = 0.84754) 
+
+[Epoch   3/3]     Time: 312.11s
+    Train: loss =     5.31517 (min =     5.46077)     acc = 0.88587 (max = 0.88161) 
+    Test : loss =     6.10035 (min =     6.29059)     acc = 0.85554 (max = 0.84754) 
+
+Total training time: 926.93s
+
+[Trial 10/100,   Sub-Trial 1/1]:     Time: 927.20s
+  accuracy: 0.856
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 302.24s
+    Train: loss =     5.72990                          acc = 0.86007 
+    Test : loss =     5.70633                          acc = 0.85270 
+
+[Epoch   2/3]     Time: 300.62s
+    Train: loss =     4.44872 (min =     5.72990)     acc = 0.88668 (max = 0.86007) 
+    Test : loss =     5.29974 (min =     5.70633)     acc = 0.85828 (max = 0.85270) 
+
+[Epoch   3/3]     Time: 324.91s
+    Train: loss =     4.12878 (min =     4.44872)     acc = 0.89253 (max = 0.88668) 
+    Test : loss =     5.07737 (min =     5.29974)     acc = 0.86331 (max = 0.85828) 
+
+Total training time: 927.87s
+
+[Trial 11/100,   Sub-Trial 1/1]:     Time: 928.26s
+  accuracy: 0.863
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 279.81s
+    Train: loss =     6.02368                          acc = 0.85430 
+    Test : loss =     5.83090                          acc = 0.85121 
+
+[Epoch   2/3]     Time: 278.38s
+    Train: loss =     4.54167 (min =     6.02368)     acc = 0.88464 (max = 0.85430) 
+    Test : loss =     5.90799 (min =     5.83090)     acc = 0.84767 (max = 0.85121) 
+
+[Epoch   3/3]     Time: 284.13s
+    Train: loss =     4.17348 (min =     4.54167)     acc = 0.89057 (max = 0.88464) 
+    Test : loss =     5.36926 (min =     5.83090)     acc = 0.85565 (max = 0.85121) 
+
+Total training time: 842.37s
+
+[Trial 12/100,   Sub-Trial 1/1]:     Time: 842.55s
+  accuracy: 0.856
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 275.10s
+    Train: loss =    12.50586                          acc = 0.72801 
+    Test : loss =    12.26479                          acc = 0.72607 
+
+[Epoch   2/3]     Time: 281.54s
+    Train: loss =     6.96590 (min =    12.50586)     acc = 0.83985 (max = 0.72801) 
+    Test : loss =     6.77131 (min =    12.26479)     acc = 0.83727 (max = 0.72607) 
+
+[Epoch   3/3]     Time: 278.67s
+    Train: loss =     6.44459 (min =     6.96590)     acc = 0.85266 (max = 0.83985) 
+    Test : loss =     6.26828 (min =     6.77131)     acc = 0.84556 (max = 0.83727) 
+
+Total training time: 835.36s
+
+[Trial 13/100,   Sub-Trial 1/1]:     Time: 835.51s
+  accuracy: 0.846
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 293.16s
+    Train: loss =     7.36805                          acc = 0.82873 
+    Test : loss =     6.57374                          acc = 0.83800 
+
+[Epoch   2/3]     Time: 330.02s
+    Train: loss =     5.50880 (min =     7.36805)     acc = 0.87790 (max = 0.82873) 
+    Test : loss =     6.32512 (min =     6.57374)     acc = 0.84913 (max = 0.83800) 
+
+[Epoch   3/3]     Time: 322.80s
+    Train: loss =     5.30274 (min =     5.50880)     acc = 0.88413 (max = 0.87790) 
+    Test : loss =     6.02311 (min =     6.32512)     acc = 0.85559 (max = 0.84913) 
+
+Total training time: 946.71s
+
+[Trial 14/100,   Sub-Trial 1/1]:     Time: 946.93s
+  accuracy: 0.856
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 342.14s
+    Train: loss =     5.69633                          acc = 0.85000 
+    Test : loss =     5.45443                          acc = 0.85320 
+
+[Epoch   2/3]     Time: 289.07s
+    Train: loss =     4.27634 (min =     5.69633)     acc = 0.88730 (max = 0.85000) 
+    Test : loss =     5.19903 (min =     5.45443)     acc = 0.85987 (max = 0.85320) 
+
+[Epoch   3/3]     Time: 293.09s
+    Train: loss =     4.07848 (min =     4.27634)     acc = 0.89301 (max = 0.88730) 
+    Test : loss =     5.04700 (min =     5.19903)     acc = 0.86117 (max = 0.85987) 
+
+Total training time: 924.45s
+
+[Trial 15/100,   Sub-Trial 1/1]:     Time: 925.35s
+  accuracy: 0.861
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 306.20s
+    Train: loss =     5.33366                          acc = 0.86200 
+    Test : loss =     5.63150                          acc = 0.84916 
+
+[Epoch   2/3]     Time: 302.69s
+    Train: loss =     4.40315 (min =     5.33366)     acc = 0.88800 (max = 0.86200) 
+    Test : loss =     5.28527 (min =     5.63150)     acc = 0.86029 (max = 0.84916) 
+
+[Epoch   3/3]     Time: 325.74s
+    Train: loss =     4.24642 (min =     4.40315)     acc = 0.89288 (max = 0.88800) 
+    Test : loss =     5.28649 (min =     5.28527)     acc = 0.85906 (max = 0.86029) 
+
+Total training time: 934.69s
+
+[Trial 17/100,   Sub-Trial 1/1]:     Time: 934.84s
+  accuracy: 0.859
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 343.56s
+    Train: loss =    10.62604                          acc = 0.74923 
+    Test : loss =     9.86783                          acc = 0.83034 
+
+[Epoch   2/3]     Time: 345.78s
+    Train: loss =     9.47005 (min =    10.62604)     acc = 0.85713 (max = 0.74923) 
+    Test : loss =     9.76248 (min =     9.86783)     acc = 0.84248 (max = 0.83034) 
+
+[Epoch   1/3]     Time: 335.95s
+    Train: loss =     5.86507                          acc = 0.85633 
+    Test : loss =     6.69899                          acc = 0.83521 
+
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 331.98s
+    Train: loss =    10.70584                          acc = 0.74841 
+    Test : loss =     9.93085                          acc = 0.81808 
+
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 366.53s
+    Train: loss =     5.30207                          acc = 0.86632 
+    Test : loss =     5.46367                          acc = 0.85406 
+
+[Epoch   2/3]     Time: 360.50s
+    Train: loss =     4.30000 (min =     5.30207)     acc = 0.88686 (max = 0.86632) 
+    Test : loss =     5.25243 (min =     5.46367)     acc = 0.85632 (max = 0.85406) 
+
+[Epoch   3/3]     Time: 366.46s
+    Train: loss =     4.08819 (min =     4.30000)     acc = 0.89230 (max = 0.88686) 
+    Test : loss =     5.20465 (min =     5.25243)     acc = 0.85979 (max = 0.85632) 
+
+Total training time: 1093.57s
+
+[Trial 21/100,   Sub-Trial 1/1]:     Time: 1094.22s
+  accuracy: 0.860
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 344.36s
+    Train: loss =     7.54515                          acc = 0.81977 
+    Test : loss =     6.07143                          acc = 0.84113 
+
+[Epoch   2/3]     Time: 347.46s
+    Train: loss =     5.10049 (min =     7.54515)     acc = 0.87198 (max = 0.81977) 
+    Test : loss =     6.25264 (min =     6.07143)     acc = 0.85020 (max = 0.84113) 
+
+[Epoch   3/3]     Time: 356.39s
+    Train: loss =     4.83669 (min =     5.10049)     acc = 0.88065 (max = 0.87198) 
+    Test : loss =     5.98326 (min =     6.07143)     acc = 0.85348 (max = 0.85020) 
+
+Total training time: 1048.26s
+
+[Trial 22/100,   Sub-Trial 1/1]:     Time: 1048.43s
+  accuracy: 0.853
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 352.35s
+    Train: loss =     5.98397                          acc = 0.84197 
+    Test : loss =     5.80889                          acc = 0.84673 
+
+[Epoch   2/3]     Time: 350.11s
+    Train: loss =     4.34206 (min =     5.98397)     acc = 0.88599 (max = 0.84197) 
+    Test : loss =     5.52371 (min =     5.80889)     acc = 0.85088 (max = 0.84673) 
+
+[Epoch   3/3]     Time: 350.72s
+    Train: loss =     4.09627 (min =     4.34206)     acc = 0.89187 (max = 0.88599) 
+    Test : loss =     5.14546 (min =     5.52371)     acc = 0.86146 (max = 0.85088) 
+
+Total training time: 1053.24s
+
+[Trial 23/100,   Sub-Trial 1/1]:     Time: 1053.40s
+  accuracy: 0.861
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 356.84s
+    Train: loss =     5.66206                          acc = 0.85118 
+    Test : loss =     5.35577                          acc = 0.85429 
+
+[Epoch   2/3]     Time: 340.52s
+    Train: loss =     4.26708 (min =     5.66206)     acc = 0.88738 (max = 0.85118) 
+    Test : loss =     5.17309 (min =     5.35577)     acc = 0.85992 (max = 0.85429) 
+
+[Epoch   3/3]     Time: 377.60s
+    Train: loss =     4.10851 (min =     4.26708)     acc = 0.89189 (max = 0.88738) 
+    Test : loss =     5.10151 (min =     5.17309)     acc = 0.86083 (max = 0.85992) 
+
+Total training time: 1075.47s
+
+[Trial 25/100,   Sub-Trial 1/1]:     Time: 1075.87s
+  accuracy: 0.861
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 350.89s
+    Train: loss =     7.96329                          acc = 0.80505 
+    Test : loss =     6.06909                          acc = 0.85077 
+
+[Epoch   2/3]     Time: 352.06s
+    Train: loss =     5.16289 (min =     7.96329)     acc = 0.88747 (max = 0.80505) 
+    Test : loss =     5.98227 (min =     6.06909)     acc = 0.85520 (max = 0.85077) 
+
+[Epoch   3/3]     Time: 351.47s
+    Train: loss =     5.01754 (min =     5.16289)     acc = 0.89215 (max = 0.88747) 
+    Test : loss =     5.84812 (min =     5.98227)     acc = 0.86253 (max = 0.85520) 
+
+Total training time: 1054.48s
+
+[Trial 28/100,   Sub-Trial 1/1]:     Time: 1054.64s
+  accuracy: 0.863
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 361.06s
+    Train: loss =     8.48837                          acc = 0.81337 
+    Test : loss =     7.43730                          acc = 0.85080 
+
+[Epoch   2/3]     Time: 349.09s
+    Train: loss =     6.74412 (min =     8.48837)     acc = 0.88571 (max = 0.81337) 
+    Test : loss =     7.41161 (min =     7.43730)     acc = 0.85314 (max = 0.85080) 
+
+[Epoch   3/3]     Time: 337.15s
+    Train: loss =     6.62322 (min =     6.74412)     acc = 0.89072 (max = 0.88571) 
+    Test : loss =     7.32301 (min =     7.41161)     acc = 0.85721 (max = 0.85314) 
+
+Total training time: 1047.38s
+
+[Trial 29/100,   Sub-Trial 1/1]:     Time: 1047.53s
+  accuracy: 0.857
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 356.31s
+    Train: loss =    11.96183                          acc = 0.60257 
+    Test : loss =     9.86399                          acc = 0.84118 
+
+[Epoch   2/3]     Time: 334.34s
+    Train: loss =     8.57821 (min =    11.96183)     acc = 0.87791 (max = 0.60257) 
+    Test : loss =     7.43135 (min =     9.86399)     acc = 0.85437 (max = 0.84118) 
+
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 356.91s
+    Train: loss =     5.89593                          acc = 0.84546 
+    Test : loss =     5.79882                          acc = 0.84094 
+
+[Epoch   2/3]     Time: 360.18s
+    Train: loss =     4.41794 (min =     5.89593)     acc = 0.88696 (max = 0.84546) 
+    Test : loss =     5.42726 (min =     5.79882)     acc = 0.85549 (max = 0.84094) 
+
+[Epoch   3/3]     Time: 392.13s
+    Train: loss =     4.21615 (min =     4.41794)     acc = 0.89228 (max = 0.88696) 
+    Test : loss =     5.14674 (min =     5.42726)     acc = 0.86201 (max = 0.85549) 
+
+Total training time: 1109.28s
+
+[Trial 32/100,   Sub-Trial 1/1]:     Time: 1109.41s
+  accuracy: 0.862
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 403.36s
+    Train: loss =     7.81406                          acc = 0.82940 
+    Test : loss =     6.52715                          acc = 0.85035 
+
+[Epoch   2/3]     Time: 405.59s
+    Train: loss =     5.22768 (min =     7.81406)     acc = 0.88627 (max = 0.82940) 
+    Test : loss =     5.95884 (min =     6.52715)     acc = 0.85682 (max = 0.85035) 
+
+[Epoch   3/3]     Time: 385.73s
+    Train: loss =     5.00423 (min =     5.22768)     acc = 0.89256 (max = 0.88627) 
+    Test : loss =     6.03364 (min =     5.95884)     acc = 0.85549 (max = 0.85682) 
+
+Total training time: 1195.27s
+
+[Trial 33/100,   Sub-Trial 1/1]:     Time: 1195.43s
+  accuracy: 0.855
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 408.31s
+    Train: loss =     5.71678                          acc = 0.84925 
+    Test : loss =     5.60193                          acc = 0.84462 
+
+[Epoch   2/3]     Time: 393.03s
+    Train: loss =     4.25834 (min =     5.71678)     acc = 0.88723 (max = 0.84925) 
+    Test : loss =     5.19244 (min =     5.60193)     acc = 0.85857 (max = 0.84462) 
+
+[Epoch   3/3]     Time: 404.02s
+    Train: loss =     4.02236 (min =     4.25834)     acc = 0.89375 (max = 0.88723) 
+    Test : loss =     5.02454 (min =     5.19244)     acc = 0.86417 (max = 0.85857) 
+
+Total training time: 1205.48s
+
+[Trial 34/100,   Sub-Trial 1/1]:     Time: 1205.83s
+  accuracy: 0.864
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 434.53s
+    Train: loss =     5.53202                          acc = 0.85562 
+    Test : loss =     5.42016                          acc = 0.85393 
+
+[Epoch   2/3]     Time: 432.49s
+    Train: loss =     4.25503 (min =     5.53202)     acc = 0.88833 (max = 0.85562) 
+    Test : loss =     5.29152 (min =     5.42016)     acc = 0.85572 (max = 0.85393) 
+
+[Epoch   3/3]     Time: 432.05s
+    Train: loss =     4.06049 (min =     4.25503)     acc = 0.89370 (max = 0.88833) 
+    Test : loss =     5.03526 (min =     5.29152)     acc = 0.86472 (max = 0.85572) 
+
+Total training time: 1299.54s
+
+[Trial 41/100,   Sub-Trial 1/1]:     Time: 1299.79s
+  accuracy: 0.865
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 456.27s
+    Train: loss =     6.66668                          acc = 0.83735 
+    Test : loss =     5.59980                          acc = 0.85022 
+
+[Epoch   2/3]     Time: 477.51s
+    Train: loss =     4.34310 (min =     6.66668)     acc = 0.88678 (max = 0.83735) 
+    Test : loss =     5.08066 (min =     5.59980)     acc = 0.86276 (max = 0.85022) 
+
+[Epoch   3/3]     Time: 454.59s
+    Train: loss =     4.07711 (min =     4.34310)     acc = 0.89300 (max = 0.88678) 
+    Test : loss =     5.02800 (min =     5.08066)     acc = 0.86229 (max = 0.86276) 
+
+Total training time: 1388.42s
+
+[Trial 42/100,   Sub-Trial 1/1]:     Time: 1388.60s
+  accuracy: 0.862
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 458.64s
+    Train: loss =     6.52160                          acc = 0.84515 
+    Test : loss =     5.60318                          acc = 0.85150 
+
+[Epoch   2/3]     Time: 466.61s
+    Train: loss =     4.34852 (min =     6.52160)     acc = 0.88855 (max = 0.84515) 
+    Test : loss =     5.20638 (min =     5.60318)     acc = 0.86039 (max = 0.85150) 
+
+[Epoch   3/3]     Time: 449.39s
+    Train: loss =     4.03832 (min =     4.34852)     acc = 0.89385 (max = 0.88855) 
+    Test : loss =     5.10984 (min =     5.20638)     acc = 0.86065 (max = 0.86039) 
+
+Total training time: 1375.36s
+
+[Trial 43/100,   Sub-Trial 1/1]:     Time: 1375.55s
+  accuracy: 0.861
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 496.38s
+    Train: loss =     5.42079                          acc = 0.85556 
+    Test : loss =     5.45940                          acc = 0.84968 
+
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 461.10s
+    Train: loss =     8.08552                          acc = 0.82142 
+    Test : loss =     6.42854                          acc = 0.84665 
+
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 457.93s
+    Train: loss =     5.81652                          acc = 0.84654 
+    Test : loss =     5.53465                          acc = 0.84741 
+
+[Epoch   2/3]     Time: 488.02s
+    Train: loss =     4.24688 (min =     5.81652)     acc = 0.88798 (max = 0.84654) 
+    Test : loss =     5.21849 (min =     5.53465)     acc = 0.85666 (max = 0.84741) 
+
+[Epoch   3/3]     Time: 474.17s
+    Train: loss =     4.04558 (min =     4.24688)     acc = 0.89302 (max = 0.88798) 
+    Test : loss =     5.04958 (min =     5.21849)     acc = 0.86229 (max = 0.85666) 
+
+Total training time: 1420.72s
+
+[Trial 55/100,   Sub-Trial 1/1]:     Time: 1420.86s
+  accuracy: 0.862
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 525.82s
+    Train: loss =     6.20657                          acc = 0.84389 
+    Test : loss =     5.44422                          acc = 0.85340 
+
+[Epoch   2/3]     Time: 516.98s
+    Train: loss =     4.39412 (min =     6.20657)     acc = 0.88720 (max = 0.84389) 
+    Test : loss =     5.40934 (min =     5.44422)     acc = 0.85544 (max = 0.85340) 
+
+[Epoch   1/3]     Time: 508.66s
+    Train: loss =     6.43497                          acc = 0.84576 
+    Test : loss =     5.69850                          acc = 0.85015 
+
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 553.53s
+    Train: loss =     6.18535                          acc = 0.84661 
+    Test : loss =     5.97447                          acc = 0.84738 
+
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 585.87s
+    Train: loss =     7.43400                          acc = 0.83117 
+    Test : loss =     6.27579                          acc = 0.84746 
+
+[Epoch   2/3]     Time: 579.14s
+    Train: loss =     5.22074 (min =     7.43400)     acc = 0.88609 (max = 0.83117) 
+    Test : loss =     5.94390 (min =     6.27579)     acc = 0.85658 (max = 0.84746) 
+
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 602.54s
+    Train: loss =     6.12993                          acc = 0.85129 
+    Test : loss =     5.35036                          acc = 0.85518 
+
+[Epoch   2/3]     Time: 574.07s
+    Train: loss =     4.38848 (min =     6.12993)     acc = 0.88768 (max = 0.85129) 
+    Test : loss =     5.47538 (min =     5.35036)     acc = 0.85445 (max = 0.85518) 
+
+[Epoch   3/3]     Time: 579.79s
+    Train: loss =     4.27107 (min =     4.38848)     acc = 0.89098 (max = 0.88768) 
+    Test : loss =     5.18120 (min =     5.35036)     acc = 0.86169 (max = 0.85518) 
+
+Total training time: 1757.19s
+
+[Trial 66/100,   Sub-Trial 1/1]:     Time: 1757.46s
+  accuracy: 0.862
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 615.06s
+    Train: loss =     6.36257                          acc = 0.83193 
+    Test : loss =     5.56057                          acc = 0.84918 
+
+[Epoch   2/3]     Time: 595.37s
+    Train: loss =     4.54113 (min =     6.36257)     acc = 0.88046 (max = 0.83193) 
+    Test : loss =     5.38163 (min =     5.56057)     acc = 0.85400 (max = 0.84918) 
+
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 655.01s
+    Train: loss =     5.77039                          acc = 0.86655 
+    Test : loss =     6.02283                          acc = 0.85369 
+
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 699.56s
+    Train: loss =     6.79374                          acc = 0.83103 
+    Test : loss =     5.65933                          acc = 0.84934 
+
+[Epoch   2/3]     Time: 642.97s
+    Train: loss =     4.39254 (min =     6.79374)     acc = 0.88666 (max = 0.83103) 
+    Test : loss =     5.19214 (min =     5.65933)     acc = 0.85937 (max = 0.84934) 
+
+[Epoch   3/3]     Time: 625.74s
+    Train: loss =     4.05890 (min =     4.39254)     acc = 0.89321 (max = 0.88666) 
+    Test : loss =     5.15109 (min =     5.19214)     acc = 0.86057 (max = 0.85937) 
+
+Total training time: 1969.19s
+
+[Trial 71/100,   Sub-Trial 1/1]:     Time: 1969.53s
+  accuracy: 0.861
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 658.93s
+    Train: loss =     6.07856                          acc = 0.84859 
+    Test : loss =     5.62042                          acc = 0.84949 
+
+[Epoch   2/3]     Time: 698.81s
+    Train: loss =     4.44142 (min =     6.07856)     acc = 0.88576 (max = 0.84859) 
+    Test : loss =     5.25756 (min =     5.62042)     acc = 0.85916 (max = 0.84949) 
+
+[Epoch   3/3]     Time: 659.54s
+    Train: loss =     4.29541 (min =     4.44142)     acc = 0.89023 (max = 0.88576) 
+    Test : loss =     5.34420 (min =     5.25756)     acc = 0.85768 (max = 0.85916) 
+
+Total training time: 2017.63s
+
+[Trial 72/100,   Sub-Trial 1/1]:     Time: 2018.36s
+  accuracy: 0.858
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 678.01s
+    Train: loss =     5.19770                          acc = 0.86715 
+    Test : loss =     5.41087                          acc = 0.85408 
+
+[Epoch   2/3]     Time: 679.58s
+    Train: loss =     4.28396 (min =     5.19770)     acc = 0.89071 (max = 0.86715) 
+    Test : loss =     5.20986 (min =     5.41087)     acc = 0.86031 (max = 0.85408) 
+
+[Epoch   3/3]     Time: 699.54s
+    Train: loss =     4.10122 (min =     4.28396)     acc = 0.89642 (max = 0.89071) 
+    Test : loss =     5.10381 (min =     5.20986)     acc = 0.86482 (max = 0.86031) 
+
+Total training time: 2057.88s
+
+[Trial 75/100,   Sub-Trial 1/1]:     Time: 2058.32s
+  accuracy: 0.865
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 741.97s
+    Train: loss =     5.21675                          acc = 0.86496 
+    Test : loss =     5.25488                          acc = 0.85924 
+
+[Epoch   2/3]     Time: 689.16s
+    Train: loss =     4.12644 (min =     5.21675)     acc = 0.89090 (max = 0.86496) 
+    Test : loss =     5.31064 (min =     5.25488)     acc = 0.85890 (max = 0.85924) 
+
+[Epoch   3/3]     Time: 683.55s
+    Train: loss =     3.94897 (min =     4.12644)     acc = 0.89552 (max = 0.89090) 
+    Test : loss =     5.15457 (min =     5.25488)     acc = 0.86107 (max = 0.85924) 
+
+Total training time: 2115.87s
+
+[Trial 76/100,   Sub-Trial 1/1]:     Time: 2116.40s
+  accuracy: 0.861
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 707.06s
+    Train: loss =     5.89181                          acc = 0.85627 
+    Test : loss =     5.44472                          acc = 0.85421 
+
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 688.62s
+    Train: loss =     5.62510                          acc = 0.86004 
+    Test : loss =     5.30574                          acc = 0.85713 
+
+[Epoch   2/3]     Time: 790.20s
+    Train: loss =     4.13616 (min =     5.62510)     acc = 0.89016 (max = 0.86004) 
+    Test : loss =     5.15644 (min =     5.30574)     acc = 0.86010 (max = 0.85713) 
+
+[Epoch   3/3]     Time: 772.69s
+    Train: loss =     3.92913 (min =     4.13616)     acc = 0.89627 (max = 0.89016) 
+    Test : loss =     5.23153 (min =     5.15644)     acc = 0.85771 (max = 0.86010) 
+
+Total training time: 2252.65s
+
+[Trial 78/100,   Sub-Trial 1/1]:     Time: 2252.96s
+  accuracy: 0.858
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 789.19s
+    Train: loss =     5.46081                          acc = 0.85950 
+    Test : loss =     5.44900                          acc = 0.85340 
+
+[Epoch   2/3]     Time: 800.55s
+    Train: loss =     4.43900 (min =     5.46081)     acc = 0.88615 (max = 0.85950) 
+    Test : loss =     5.27941 (min =     5.44900)     acc = 0.85890 (max = 0.85340) 
+
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 837.09s
+    Train: loss =     6.11661                          acc = 0.84543 
+    Test : loss =     5.46994                          acc = 0.85067 
+
+[Epoch   2/3]     Time: 846.82s
+    Train: loss =     4.26453 (min =     6.11661)     acc = 0.88724 (max = 0.84543) 
+    Test : loss =     5.15497 (min =     5.46994)     acc = 0.86005 (max = 0.85067) 
+
+[Epoch   3/3]     Time: 860.85s
+    Train: loss =     4.03307 (min =     4.26453)     acc = 0.89381 (max = 0.88724) 
+    Test : loss =     5.43226 (min =     5.15497)     acc = 0.85294 (max = 0.86005) 
+
+Total training time: 2546.11s
+
+[Trial 85/100,   Sub-Trial 1/1]:     Time: 2546.42s
+  accuracy: 0.853
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 850.01s
+    Train: loss =     6.50041                          acc = 0.85391 
+    Test : loss =     6.01909                          acc = 0.85711 
+
+[Epoch   2/3]     Time: 887.89s
+    Train: loss =     5.11784 (min =     6.50041)     acc = 0.88902 (max = 0.85391) 
+    Test : loss =     5.85932 (min =     6.01909)     acc = 0.86182 (max = 0.85711) 
+
+[Epoch   3/3]     Time: 887.43s
+    Train: loss =     5.00151 (min =     5.11784)     acc = 0.89307 (max = 0.88902) 
+    Test : loss =     5.97372 (min =     5.85932)     acc = 0.85739 (max = 0.86182) 
+
+Total training time: 2626.24s
+
+[Trial 86/100,   Sub-Trial 1/1]:     Time: 2627.20s
+  accuracy: 0.857
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+NOTE: discrete=False will NOT match TENNLab framework RISP dynamics exactly (datatype mismatch between cpp and python).
+[Epoch   1/3]     Time: 927.26s
+    Train: loss =     5.34534                          acc = 0.86458 
+    Test : loss =     5.45546                          acc = 0.85301 
+
